@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "ServeIQ – Volleyball Service & Score Tracker",
+  "short_name": "ServeIQ",
+  "description": "Lokale 6:6-Volleyball-Spiel- und Service-Statistik",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#112b50",
+  "theme_color": "#112b50",
+  "lang": "de-CH",
+  "icons": [
+    {"src":"./icons/icon-192.png", "sizes":"192x192", "type":"image/png", "purpose":"any maskable"},
+    {"src":"./icons/icon-512.png", "sizes":"512x512", "type":"image/png", "purpose":"any maskable"}
+  ]
+}

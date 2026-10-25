@@ -1,0 +1,1048 @@
+<!DOCTYPE html><html lang="de-CH"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#112b50"><meta name="application-name" content="ServeIQ"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icons/icon-192.png" type="image/png"><title>ServeIQ 0.2 – GitHub-Testversion</title><style>:root{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#142c4b;background:#eef3f9;font-synthesis:none;--blue:#1766b2;--deep:#102c50;--pale:#e7f0fb;--border:#d9e3f0;--red:#b83347;--green:#137a5b;--text:#142c4b}
+*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.42}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #f0b62d;outline-offset:2px}.loading{padding:4rem;text-align:center}.topbar{height:60px;background:var(--deep);color:white;display:flex;align-items:center;gap:12px;padding:0 max(18px,calc((100% - 850px)/2));position:sticky;top:0;z-index:10;box-shadow:0 2px 12px #00152925}.brand{font-size:1.35rem;font-weight:850;letter-spacing:-.5px;display:flex;align-items:center;gap:9px}.brand-mark{color:#f3c954;font-size:1.65rem}.brand .iq{color:#f9ca50}.header-context{font-size:.82rem;color:#cbdcee}.main{max-width:850px;padding:20px 16px 120px;margin:0 auto;min-height:calc(100vh - 124px)}.screen-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px}.screen-head h1{margin:2px 0 3px;font-size:1.55rem}.screen-head p{margin:0;color:#687a8b;font-size:.93rem}.screen-head.tighter{margin:25px 0 12px}h1{margin-top:0}h2{font-size:1.07rem;margin:15px 0 12px}h3{font-size:.95rem;margin:15px 0 9px}p{line-height:1.5}.muted{color:#65778a}.small{font-size:.85rem}.panel,.archive-card{background:white;border:1px solid var(--border);border-radius:15px;padding:18px;margin:14px 0;box-shadow:0 5px 17px #08254608}.panel h2:first-child{margin-top:0}.form-stack{display:flex;flex-direction:column;gap:14px}.form-stack label,.panel>label{display:flex;flex-direction:column;gap:6px;font-weight:650;font-size:.9rem}.form-stack input,.form-stack select,.panel select,.court-list select{min-height:45px;background:white;border:1px solid #b9cbe1;border-radius:10px;padding:10px 11px;color:var(--text);width:100%}.form-stack input:disabled{background:#e3e8ee}.field-label{font-weight:650;font-size:.9rem}.action-row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.btn{border:0;border-radius:11px;padding:12px 15px;min-height:44px;font-weight:700;text-align:center;line-height:1.3}.btn.primary{background:#1766b2;color:white}.btn.primary:hover{background:#10558f}.btn.secondary{background:#e5eef8;color:#173d66}.btn.secondary:hover{background:#d6e8f8}.btn.danger{background:#b63143;color:white}.btn.danger-ghost,.danger-ghost{background:#fff0f1;color:#ad2638;border:1px solid #f4c2c8}.btn.wide{width:100%}.btn.huge{min-height:62px;font-size:1.15rem}.btn .ico{margin-right:6px}.item-card{display:flex;align-items:center;gap:13px;text-align:left;border:1px solid var(--border);background:white;width:100%;border-radius:13px;padding:14px 15px;margin:8px 0;color:var(--text)}.item-card>span:nth-last-child(2){flex:1}.item-card small,.metric-grid small{display:block;color:#66798b;margin-top:3px;font-size:.8rem}.item-card:hover{border-color:var(--blue)}.empty{border:1px dashed #aac1dc;background:#f9fbfd;border-radius:15px;padding:35px 19px;text-align:center;color:#5a7187}.empty .btn{margin-top:20px}.small-note{margin-top:35px}.textlink{background:transparent;border:0;padding:9px 2px;color:#1766b2;font-weight:700}.textlink.danger{color:#b83347}.circle-number{display:inline-grid;place-items:center;flex:0 0 34px;width:34px;height:34px;background:var(--deep);border-radius:50%;color:white;font-weight:750}.number-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.number-choice{min-height:43px;border:1px solid #bfd1e3;background:#edf4fb;color:#143a63;border-radius:9px;font-weight:700}.number-choice.selected{background:#1766b2;color:white}.checkrow{display:flex;align-items:center;flex-direction:row!important;gap:13px;padding:11px 0;border-bottom:1px solid #e9eef6}.checkrow input{width:20px;height:20px}.checkrow span{flex:1}.checkrow small{color:#687a8b}.court-list{display:grid;grid-template-columns:1fr 1fr;gap:9px}.court-position{display:flex;gap:8px;align-items:center;background:white;border:1px solid var(--border);padding:10px;border-radius:11px}.court-position select{min-width:0}.seg{display:flex;gap:9px}.seg .btn{flex:1}.scoreboard{display:grid;grid-template-columns:1fr 90px 1fr;gap:5px;align-items:center;background:var(--deep);border-radius:17px;color:white;padding:13px 9px;position:sticky;top:69px;z-index:8;box-shadow:0 4px 19px #142b4a36}.score-team{text-align:center;border:1px solid transparent;border-radius:12px;padding:4px;min-width:0}.score-team.serving{border-color:#f9ca50;background:#ffffff12}.score-team small{display:block;font-size:.69rem;line-height:1.3;min-height:2.6em;overflow-wrap:anywhere}.score-team span{font-size:clamp(2.5rem,10vw,4.1rem);font-weight:850;line-height:1.15}.score-set{text-align:center}.score-set small{display:block;color:#c7def4;font-size:.75rem}.score-set strong{font-size:1.25rem}.current-player{text-align:center;padding:17px 5px 10px}.current-player small{font-size:.69rem;font-weight:850;letter-spacing:.08em;color:#627f9e}.current-player h1{margin:2px 0 1px;font-size:clamp(1.3rem,5vw,1.9rem)}.current-player p{margin:0;color:#627e98;font-size:.84rem}.service-actions{display:grid;gap:11px;margin:17px 0}.big-action{min-height:clamp(74px,15vh,122px);font-size:clamp(1.05rem,4vw,1.5rem);color:#fff;letter-spacing:.015em;border-radius:15px}.ace{background:#1163ac}.normal{background:#1b79b7}.fault{background:#b53745}.big-action:active,.point-buttons button:active{transform:scale(.987)}.point-title{text-align:center;color:#476482;font-weight:700;margin:20px 0 14px}.point-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;min-height:200px}.point-buttons button{border-radius:15px;font-size:clamp(1.06rem,4vw,1.5rem);color:white;line-height:1.5}.point-home{background:#1168b7}.point-away{background:#a93448}.controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:23px 0 10px}.btn.control{background:#e5eef9;color:#204e7a;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:1.5rem;gap:2px;padding:9px 2px}.btn.control small{font-size:.65rem;font-weight:800;line-height:1.2}.secondary-controls{display:flex;justify-content:space-between;gap:10px}.notice{background:#fff6dd;border:1px solid #edcc7c;padding:14px;border-radius:12px;color:#725110;margin:13px 0}.notice.mild{background:#f4f8ff;border-color:#c6d9ee;color:#355a7c}.notice.error{background:#ffedf0;border-color:#efbdc7;color:#9d2e45}.notice p{margin:6px 0}.win-panel{text-align:center;padding:40px 14px;background:white;border-radius:15px;margin-top:25px;font-size:1.35rem}.win-panel h1{margin:14px 0}.win-panel .action-row{justify-content:center}.tag{background:#eaf1f7;color:#335b7f;border-radius:99px;padding:4px 8px;font-size:.72rem;font-weight:700;white-space:nowrap}.archive-head{display:flex;justify-content:space-between;gap:10px}.archive-score{font-size:2rem;font-weight:800;margin:7px 0}.archive-score small{font-size:.8rem;color:#69809a}.archive-card p{margin:4px 0 8px}.archive-card .action-row{margin-top:12px}.chip-scroll{display:flex;gap:7px;overflow-x:auto;padding:0 0 7px}.chip{border:1px solid #b8cde1;background:white;color:#29537b;border-radius:30px;padding:9px 14px;white-space:nowrap}.chip.selected{background:#1766b2;color:white;border-color:#1766b2}.table-wrap{overflow-x:auto}.panel table{border-collapse:collapse;width:100%;font-size:.83rem}.panel th,.panel td{text-align:left;padding:10px 6px;border-bottom:1px solid #e5ebf4}.panel th{color:#506e89;font-size:.75rem}.panel td small{display:block;color:#678098;font-size:.7rem}.panel tr[data-action]{cursor:pointer}.panel tr[data-action]:hover{background:#f0f7ff}.infobtn{border:0;background:transparent;color:#2073bb;font-size:1.18rem;padding:0 5px;font-weight:800}.pattern-entry{display:flex;align-items:center;gap:9px;padding:10px 0;border-bottom:1px solid #e1e8ef;font-size:.88rem}.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:15px 0}.metric-grid>div{background:#eef4fb;border-radius:10px;padding:12px 5px;text-align:center}.metric-grid b{display:block;font-size:1.16rem}.metric-grid small{font-size:.7rem}.roster-entry{display:flex;align-items:center;gap:10px;padding:8px 0}.modal-backdrop{position:fixed;inset:0;background:#0b1c36bb;display:grid;place-items:center;z-index:55;padding:16px}.modal{max-width:520px;width:100%;max-height:90vh;overflow:auto;background:white;border-radius:17px;padding:23px;box-shadow:0 25px 50px #081b3350}.modal h2{margin:0 0 14px;font-size:1.22rem}.modal .form-stack button{width:100%}.toast{pointer-events:none;position:fixed;bottom:86px;left:50%;transform:translateX(-50%);background:#173f6e;color:#fff;padding:12px 16px;border-radius:11px;z-index:66;max-width:92%;box-shadow:0 9px 24px #061e3880}.bottom-nav{position:fixed;bottom:0;left:0;right:0;height:calc(70px + env(safe-area-inset-bottom));padding:6px max(10px,calc((100% - 850px)/2)) env(safe-area-inset-bottom);background:white;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #ccd9e6;z-index:15;box-shadow:0 -3px 15px #142b4a11}.nav-item{border:0;background:white;color:#6a839a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:.72rem;font-weight:700}.nav-item .ico{font-size:1.45rem}.nav-item.active{background:#e8f2ff;color:#1766b2;border-radius:9px}.splash{background:linear-gradient(160deg,#0b305c,#256da4 67%,#c9e5f2);min-height:100dvh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;color:white;text-align:center;padding:24px}.splash-ball{font-size:5rem;animation:float 3s ease-in-out infinite}.wordmark{font-size:clamp(3.1rem,14vw,6rem);font-weight:850;letter-spacing:-3px}.wordmark span{color:#ffce4f}.splash p{font-weight:700;margin:0 0 35px}.splash .btn{width:min(350px,85vw);background:#facc4b;color:#173152}.splash small{margin-top:25px;color:#b6d8ed}@keyframes float{50%{transform:translateY(-12px)}}@media(prefers-reduced-motion:reduce){.splash-ball{animation:none}}@media(min-width:700px){.main{padding:25px 25px 120px}.scoreboard{top:70px}.big-action{min-height:100px}}@media(max-width:370px){.main{padding:15px 11px 105px}.bottom-nav{height:65px}.nav-item{font-size:.63rem}.court-list{grid-template-columns:1fr}.scoreboard{grid-template-columns:1fr 66px 1fr}.score-set strong{font-size:1rem}.controls{gap:4px}.btn.control small{font-size:.55rem}}
+.statistics-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 14px}.statistics-nav .btn{min-width:114px}.statistics-nav .textlink{min-height:42px}
+/* Bottom navigation: collapsed on inactivity, 12px swipe/click handle remains visible. */
+.bottom-nav{padding-top:13px;height:calc(78px + env(safe-area-inset-bottom));transition:transform .23s ease-out}
+.bottom-nav.is-collapsed{transform:translateY(calc(100% - 12px))}
+.nav-handle{position:absolute;top:0;left:0;width:100%;height:12px;border:0;padding:0;background:#f4f8fd;display:grid;place-items:center;touch-action:pan-y}
+.nav-handle span{display:block;width:48px;height:4px;border-radius:6px;background:#8ca9c4}
+@media(min-width:900px){.bottom-nav.is-collapsed{transform:none}}
+@media(prefers-reduced-motion:reduce){.bottom-nav{transition:none}}
+
+/* ServeIQ 0.2 – functional layout */
+.brand-button{background:transparent;border:0;color:inherit;padding:3px;cursor:pointer}.topbar{justify-content:space-between}.settings-trigger{background:transparent;border:1px solid #6285ad;color:#fff;border-radius:9px;width:41px;height:41px;font-size:1.3rem}.backbutton{display:inline-block;margin:0 0 10px}.home-view{text-align:center;padding:13vh 15px}.home-crest{font-size:5rem}.home-view h1{font-size:3.4rem;margin:12px 0}.iq-color{color:#d19a20}.roster-toolbar{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:12px}.roster-toolbar .btn{width:100%;min-width:0}.roster-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:13px 0}.roster-tile{position:relative;background:white;border:1.5px solid #bfcee0;border-radius:11px;display:flex;flex-direction:column;gap:5px;padding:9px 10px;min-height:59px;text-align:left;color:#203f64}.roster-tile b{font-size:.74rem}.roster-tile span{font-size:.82rem;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.roster-tile.chosen{background:#d9ebfd;border:2px solid #246ea9}.roster-tile em{position:absolute;right:6px;top:6px;font-style:normal;font-size:.8rem;color:#246ea9}.court-net{border-top:9px double #c7d9e8;background:#e8f4fe;text-align:center;font-size:.75rem;font-weight:800;padding:6px}.volley-court{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;background:#2f83b4;padding:5px;border:3px solid #17598a;aspect-ratio:1.9;min-height:210px}.volley-slot{display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px dashed #87c6e9;background:#e9f4ff;border-radius:3px;padding:4px;color:#20446e;min-width:0}.volley-slot.filled{background:#c3e5fb}.volley-slot small{font-size:.65rem}.volley-slot b{font-size:.78rem;overflow-wrap:anywhere}.baseline{text-align:center;font-size:.72rem;font-weight:800;letter-spacing:.1em;color:#54708f;margin:4px}.libero-station{width:min(49%,240px);border:1.5px solid #c0d2e3;margin:14px 0 18px;border-radius:10px;padding:7px 8px;display:grid;gap:4px}.libero-station label{font-size:.79rem;font-weight:750}.libero-station select{width:100%;min-width:0;height:39px}.libero-station small{font-size:.66rem;color:#67839d}.score-team.serving{border-width:3px;animation:counter-breathe 2.7s ease-in-out infinite}.score-team.away-serving{border-color:#ee9854;box-shadow:0 0 5px #e69b4f70}.score-team.home-serving{border-color:#f9cb59;box-shadow:0 0 5px #f9cb5970}@keyframes counter-breathe{50%{box-shadow:0 0 14px 2px #e6c24c80}}.point-buttons{min-height:clamp(230px,38vh,460px);margin-top:12px}.point-buttons button{font-size:clamp(1rem,4vw,1.55rem);overflow-wrap:anywhere;padding:12px 5px}.controls{margin-top:40px}.current-player{min-height:110px}.confetti{text-align:center;font-size:1.9rem;animation:confetti-appear 2s ease-out 1}@keyframes confetti-appear{0%{opacity:0;transform:translateY(-10px)}40%{opacity:1}100%{opacity:1;transform:translateY(3px)}}.analysis-metric{margin:8px 0 15px}.analysis-row{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px}.analysis-track{height:19px;background:#e4edf6;border-radius:10px;overflow:hidden}.analysis-bar{height:100%;background:#226ca9;border-radius:10px}.analysis-bar.error-bar,.analysis-bar.negative{background:#c05464}.nextset-modal{max-width:680px;max-height:94vh}.nextset-modal .volley-court{min-height:150px}.nextset-modal .libero-station{width:60%}@media(max-width:390px){.roster-grid{gap:5px}.roster-tile{min-height:55px;padding:8px}.volley-court{min-height:185px}.volley-slot b{font-size:.66rem}}@media(prefers-reduced-motion:reduce){.score-team.serving,.confetti{animation:none}}
+
+.roster-tile.picked{outline:3px solid #edb94f;background:#fff6d7;box-shadow:0 0 8px #e7ba56}.volley-slot{touch-action:manipulation}.roster-tile[draggable]{cursor:grab}
+
+.roster-tile.picked{outline:3px solid #edb94f;background:#fff6d7;box-shadow:0 0 8px #e7ba56}.volley-slot{touch-action:manipulation}.roster-tile[draggable]{cursor:grab}
+
+.roster-tile.picked{outline:3px solid #edb94f;background:#fff6d7;box-shadow:0 0 8px #e7ba56}.volley-slot{touch-action:manipulation}.roster-tile[draggable]{cursor:grab}
+
+.ongoing-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.game-indicator{font-size:.73rem;color:#276147;font-weight:700}.ongoing-card h3{font-size:1.08rem;margin:10px 0 2px}.start-game-from-home{margin:14px 0 17px}.start-game-from-home:disabled{opacity:.5}
+
+/* Korrektur 8: Namen/Nummern auf Feldpositionen und kompakte Libera-Auswahl */
+.volley-slot b{display:flex;flex-direction:column;gap:3px;align-items:center;min-width:0;font-size:.79rem;line-height:1.2}
+.volley-slot .slot-number{font-weight:850;font-size:.79rem}
+.volley-slot .slot-name{font-weight:650;font-size:.76rem;overflow-wrap:anywhere}
+.nextset-modal .volley-slot{min-height:67px}
+.nextset-modal .roster-tile[draggable]{touch-action:pan-y}
+@media(max-width:410px){.volley-slot .slot-name{font-size:.68rem}.volley-slot .slot-number{font-size:.71rem}}
+/* Korrektur 9: Eigene Aufschlagaktionen ausschliesslich auf der gewählten Interlaken-Hälfte. */
+.service-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;min-height:clamp(230px,38vh,460px);margin-top:12px;margin-bottom:0}
+.service-action-stack{display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:10px;min-width:0;min-height:0}
+.service-action-stack>.big-action{width:100%;min-width:0;min-height:0;height:100%;font-size:clamp(.95rem,3.45vw,1.4rem);padding:8px 5px;overflow-wrap:anywhere;hyphens:auto}
+.service-empty-side{min-width:0;pointer-events:none}
+@media(max-width:370px){.service-actions{gap:7px}.service-action-stack{gap:7px}.service-action-stack>.big-action{font-size:.91rem;padding:5px 3px}}
+/* Korrektur 11 – vier feste Live-Game-Aktionen direkt unter den Punkteflächen. */
+.controls{margin:10px 0 12px;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.btn.control{min-width:0;min-height:68px;padding:8px 3px 7px;font-size:1.4rem;gap:3px}
+.btn.control small{font-size:clamp(.62rem,2.1vw,.77rem);line-height:1.18;overflow-wrap:break-word;hyphens:auto;text-align:center}
+@media(max-width:390px){.controls{gap:4px}.btn.control{min-height:66px;padding:7px 2px}.btn.control small{font-size:.61rem}}
+.endset-point-correction{margin-top:15px}
+</style></head><body><div id="app"><main class="loading">ServeIQ 0.2 wird geladen …</main></div><script type="module">// model
+/** ServeIQ v0.1 – pure, deterministic volleyball rules and statistics. */
+const VERSION = 1;
+const uid = () => (globalThis.crypto?.randomUUID?.() || `id-${Date.now()}-${Math.random().toString(36).slice(2)}`);
+const opposite = s => s === 'home' ? 'away' : 'home';
+const sideOpposite = s => s === 'left' ? 'right' : 'left';
+const setTarget = number => number === 5 ? 15 : 25;
+const wonSet = (h, a, number) => Math.max(h,a) >= setTarget(number) && Math.abs(h-a) >= 2;
+const newAppData = () => ({schema:VERSION, teams:[],matches:[],draft:null, lastView:'home',introSeen:false});
+function teamName(t) {
+  return [t.club, t.category, t.league, t.group?`Gr. ${t.group}`:'', t.season].filter(Boolean).join(' · ');
+}
+const playerLabel = p => p ? `#${p.number} ${p.first} ${p.last}`.trim() : '–';
+const clone = x => JSON.parse(JSON.stringify(x));
+function newMatch(team, opponent, date, rosterIds) {
+  if (!team || !opponent?.trim() || rosterIds.length < 6) throw Error('Team, Gegner und mindestens 6 Spielerinnen erforderlich.');
+  const chosen=team.players.filter(p=>rosterIds.includes(p.id));
+  if(new Set(rosterIds).size!==rosterIds.length || chosen.length!==rosterIds.length)throw Error('Matchkader enthält doppelte oder ungültige Spielerinnen.');
+  if(new Set(chosen.map(p=>Number(p.number))).size!==chosen.length)throw Error('Doppelte Trikotnummer im Matchkader. Bitte zuerst im Teamkader korrigieren.');
+  if(chosen.filter(p=>p.position!=='L').length<6)throw Error('Mindestens sechs reguläre Spielerinnen auswählen.');
+  return {id:uid(), teamId:team.id, teamSnapshot:clone(team), opponent:opponent.trim(),date,
+    rosterIds:[...rosterIds], events:[], cursor:0, archivedEarly:false, createdAt:new Date().toISOString()};
+}
+function pushEvent(match, event) {
+  const state = replay(match);
+  if(state.finished) throw Error('Dieses Spiel ist abgeschlossen.');
+  if(match.archivedEarly) throw Error('Dieses Spiel ist archiviert.');
+  const next=clone(match);
+  next.events=next.events.slice(0,next.cursor);
+  next.events.push({...event, at:new Date().toISOString()});
+  next.cursor=next.events.length;
+  const result=replay(next);
+  if(result.error) throw Error(result.error);
+  return next;
+}
+// Punktkorrektur: NORMAL + RALLY gehören zu genau EINEM abgeschlossenen Ballwechsel.
+// Reguläre Wechsel/Satzanfänge nach dem zu entfernenden Punkt müssen ebenfalls
+// rückwärts mitgerollt werden, damit der rekonstruierte Zustand konsistent bleibt.
+function lastPointIndex(match) {
+  for (let i=match.cursor-1;i>=0;i--) if(match.events[i].type==='RALLY') return i;
+  return -1;
+}
+function nextPointIndex(match) {
+  for (let i=match.cursor;i<match.events.length;i++) if(match.events[i].type==='RALLY') return i;
+  return -1;
+}
+function canUndoPoint(match){return !match.archivedEarly && (lastPointIndex(match)>=0 || match.events.slice(0,match.cursor).some(e=>e.type==='NORMAL'));}
+function canRedoPoint(match){return !match.archivedEarly && (nextPointIndex(match)>=0 || match.events.slice(match.cursor).some(e=>e.type==='NORMAL'));}
+function undoPoint(match){
+  const x=clone(match);if(x.archivedEarly)return x;
+  const i=lastPointIndex(x);
+  if(i<0){ // Offenen, noch nicht gewerteten normalen Service zurücknehmen.
+    for(let j=x.cursor-1;j>=0;j--)if(x.events[j].type==='NORMAL'){x.cursor=j;break;}
+    return x;
+  }
+  x.cursor=i>0 && x.events[i].kind==='normal' && x.events[i-1].type==='NORMAL' ? i-1 : i;
+  return x;
+}
+function redoPoint(match){
+  const x=clone(match);if(x.archivedEarly)return x;
+  const i=nextPointIndex(x);
+  if(i<0){for(let j=x.cursor;j<x.events.length;j++)if(x.events[j].type==='NORMAL'){x.cursor=j+1;break;}return x;}
+  x.cursor=i+1;
+  // Nachfolgende Verwaltungsereignisse wiederherstellen, falls sie beim
+  // Rückwärtsgehen wegen ihrer späteren Zeitposition mit entfernt wurden.
+  while(x.cursor<x.events.length && !['RALLY','NORMAL'].includes(x.events[x.cursor].type))x.cursor++;
+  return x;
+}
+// Allgemeines Ereignis-Undo für interne/historische Tests beibehalten.
+function undo(match) {let x=clone(match);if(x.cursor>0 && !x.archivedEarly)x.cursor--;return x;}
+function redo(match) {let x=clone(match);if(x.cursor<x.events.length && !x.archivedEarly)x.cursor++;return x;}
+function activePlayers(set){return set.slots.map(sl=>sl.playerId);}
+function currentServer(set){return set.slots[0]?.playerId;}
+function snapshotRally(set,kind,winner) {
+  return {kind,winner,serverId:set.server==='home'?currentServer(set):null,servingTeam:set.server,
+    before:[set.home,set.away],participants:activePlayers(set),turn:set.homeTurn};
+}
+function eventApply(st,e,idx) {
+  if(e.type==='SET_START') {
+    if(st.sets.length && !st.sets.at(-1).winner) return 'Vor dem nächsten Satz muss der aktuelle Satz beendet sein.';
+    if(st.sets.length>=5 || st.finished) return 'Das Spiel ist bereits beendet.';
+    if(!Array.isArray(e.lineup)||e.lineup.length!==6||new Set(e.lineup).size!==6) return 'Genau sechs unterschiedliche Startspielerinnen nötig.';
+    if(!e.lineup.every(id=>st.match.rosterIds.includes(id))) return 'Eine Startspielerin fehlt im Matchkader.';
+    if(e.lineup.some(id=>st.match.teamSnapshot.players.find(p=>p.id===id)?.position==='L')) return 'Die Libera darf keine reguläre Rotationsposition besetzen.';
+    if(e.liberoId && (e.lineup.includes(e.liberoId)||!st.match.rosterIds.includes(e.liberoId))) return 'Ungültige Libera-Auswahl.';
+    const number=st.sets.length+1;
+    if(number>=2 && number<=4 && (e.firstServe!==opposite(st.sets.at(-1).firstServe) || e.side!==sideOpposite(st.sets.at(-1).side))) return 'Satz 2–4: Erster Service und Spielfeldseite müssen gegenüber dem vorigen Satz wechseln.';
+    const set={number,firstServe:e.firstServe,side:e.side||'left',home:0,away:0,server:e.firstServe,
+      slots:e.lineup.map(id=>({starterId:id,playerId:id,libero:false})),liberoId:e.liberoId||null,
+      regularSubs:0, subPairs:{},homeTurn:e.firstServe==='home'?1:0,rallies:[],substitutions:[],
+      liberoMoves:[],pending:null,winner:null,sideSwitched:false,sideSwitchJustHappened:false,phaseNote:''};
+    st.sets.push(set);return null;
+  }
+  const set=st.sets.at(-1);
+  if(!set) return 'Zuerst den ersten Satz starten.';
+  if(set.winner) return 'Dieser Satz ist beendet.';
+  set.sideSwitchJustHappened=false;
+  if(e.type==='NORMAL') {
+    if(set.pending || set.server!=='home') return 'Normaler Service hier nicht möglich.';
+    set.pending={serverId:currentServer(set),before:[set.home,set.away],turn:set.homeTurn};return null;
+  }
+  if(e.type==='RALLY') {
+    if(set.pending && e.kind!=='normal') return 'Zuerst den normalen Service abschliessen.';
+    if(!set.pending && e.kind==='normal') return 'Zuerst normalen Service erfassen.';
+    if(set.server==='home' && !['ace','fault','normal'].includes(e.kind)) return 'Ungültige Serviceaktion.';
+    if(set.server==='away' && e.kind!=='opponent') return 'Gegner serviert.';
+    if(e.kind==='ace' && e.winner!=='home') return 'Ass bedeutet Punkt Interlaken.';
+    if(e.kind==='fault' && e.winner!=='away') return 'Servicefehler bedeutet Punkt Gegner.';
+    if(!['home','away'].includes(e.winner)) return 'Punktgewinner fehlt.';
+    let rally=snapshotRally(set,e.kind,e.winner);
+    if(set.pending) {rally.serverId=set.pending.serverId; rally.before=[...set.pending.before];rally.turn=set.pending.turn;}
+    set.rallies.push(rally);
+    if(e.winner==='home')set.home++;else set.away++;
+    if(set.server==='away' && e.winner==='home') {
+      set.slots.push(set.slots.shift()); // position 2 becomes position 1: clockwise side-out
+      set.homeTurn++;
+    }
+    set.server=e.winner;
+    set.pending=null;
+    if(set.number===5 && !set.sideSwitched && Math.max(set.home,set.away)>=8) {
+      set.sideSwitched=true;set.side=sideOpposite(set.side);set.sideSwitchJustHappened=true;
+    }
+    if(wonSet(set.home,set.away,set.number)) {
+      set.winner=set.home>set.away?'home':'away';
+      const homeWins=st.sets.filter(s=>s.winner==='home').length;
+      const awayWins=st.sets.filter(s=>s.winner==='away').length;
+      if(homeWins===3||awayWins===3)st.finished=true;
+    }
+    return null;
+  }
+  if(set.pending) return 'Ein normaler Service muss zuerst abgeschlossen werden.';
+  if(e.type==='SUB') {
+    if(set.regularSubs>=6) return 'Maximal sechs reguläre Wechsel pro Satz.';
+    const pos=set.slots.findIndex(x=>x.playerId===e.outId);
+    if(pos<0) return 'Die auszuwechselnde Spielerin steht nicht regulär auf dem Feld.';
+    const slot=set.slots[pos];if(slot.libero)return 'Zuerst den Liberawechsel abschliessen.';
+    if(!st.match.rosterIds.includes(e.inId))return 'Ersatzspielerin nicht im Matchkader.';
+    if(set.slots.some(s=>s.playerId===e.inId || (s.libero&&set.liberoId===e.inId)))return 'Spielerin steht bereits auf dem Feld.';
+    if(set.liberoId===e.inId) return 'Libera nur über Liberawechsel einsetzen.';
+    const pair=set.subPairs[slot.starterId];
+    if(!pair) {
+      if(slot.playerId!==slot.starterId) return 'Ungültiger Erstwechsel.';
+      const involved=Object.values(set.subPairs).some(p=>p.subId===e.inId);
+      if(involved)return 'Diese Ersatzspielerin wurde bereits eingesetzt.';
+      set.subPairs[slot.starterId]={subId:e.inId,returned:false};
+    }else{
+      if(pair.returned||slot.playerId!==pair.subId||e.inId!==slot.starterId)return 'Nur der regelkonforme Rückwechsel ist noch möglich.';
+      pair.returned=true;
+    }
+    slot.playerId=e.inId;set.regularSubs++;
+    set.substitutions.push({kind:'regular',out:e.outId,in:e.inId,at:[set.home,set.away],rallyIndex:set.rallies.length});return null;
+  }
+  if(e.type==='SIDE') {set.side=sideOpposite(set.side);set.phaseNote='Spielfeldseite manuell korrigiert';return null;}
+  return 'Unbekannte Aktion.';
+}
+function replay(match){
+  let st={match,sets:[],finished:false,error:null};
+  for(let i=0;i<match.cursor;i++) {
+    let error=eventApply(st,match.events[i],i);
+    if(error){st.error=`Aktion ${i+1}: ${error}`;break;}
+  }
+  st.current=st.sets.at(-1)||null;
+  st.homeSets=st.sets.filter(s=>s.winner==='home').length;
+  st.awaySets=st.sets.filter(s=>s.winner==='away').length;
+  return st;
+}
+function buildStats(match, selectedSet=0){
+  const st=replay(match);const players=match.teamSnapshot.players.filter(p=>match.rosterIds.includes(p.id)&&p.position!=='L');
+  const sets=selectedSet?st.sets.filter(s=>s.number===selectedSet):st.sets;
+  const allSets=st.sets;
+  const detailed=[];const patterns=[];const phases=[];
+  for(const set of sets){
+    const served=set.rallies.filter(r=>r.servingTeam==='home');
+    const byTurn=new Map();
+    served.forEach(r=>{const key=`${r.turn}-${r.serverId}`;if(!byTurn.has(key))byTurn.set(key,[]);byTurn.get(key).push(r);});
+    const runs=[...byTurn].map(([key,arr])=>({playerId:arr[0].serverId,turn:arr[0].turn,first:arr[0],last:arr.at(-1)})).sort((a,b)=>a.turn-b.turn);
+    for(let i=1;i<runs.length;i++){
+      const prev=runs[i-1],cur=runs[i];
+      if(prev.last.kind==='fault' && cur.first.kind==='fault' && prev.playerId!==cur.playerId)patterns.push({type:'consecutive',set:set.number,players:[prev.playerId,cur.playerId]});
+    }
+    const lastByPlayer=new Map();
+    for(const run of runs){const prev=lastByPlayer.get(run.playerId);
+      if(prev && prev.last.kind==='fault' && run.first.kind==='fault')patterns.push({type:'repeat',set:set.number,players:[run.playerId]});
+      lastByPlayer.set(run.playerId,run);
+    }
+    for(const r of served){
+      const [h,a]=r.before,peak=Math.max(h,a),late=set.number===5?14:24;
+      let phase;
+      if(h>=late&&a>=late)phase='Verlängerung';
+      else if(peak<=(set.number===5?5:9))phase='Start';
+      else if(peak<=(set.number===5?11:19))phase='Aufbau';
+      else phase='Entscheidung';
+      const target=setTarget(set.number);
+      const setballHome=h>=target-1&&h>a;
+      const setballAway=a>=target-1&&a>h;
+      phases.push({set:set.number,playerId:r.serverId,phase,score:`${h}:${a}`,situation:h>a?'Führung':h<a?'Rückstand':'Gleichstand',setball:setballHome?'Satzball für Interlaken':setballAway?'Satzball Gegner':'',kind:r.kind,winner:r.winner});
+    }
+  }
+  const stats=players.map(p=>{
+    const rallies=sets.flatMap(s=>s.rallies);
+    const mine=rallies.filter(r=>r.servingTeam==='home'&&r.serverId===p.id);
+    const ace=mine.filter(r=>r.kind==='ace').length,normal=mine.filter(r=>r.kind==='normal').length,
+      fault=mine.filter(r=>r.kind==='fault').length,points=mine.filter(r=>r.winner==='home').length;
+    const total=mine.length,efficiency=total?(ace-fault)/total*100:null,pq=total?points/total*100:null, fq=total?fault/total*100:null;
+    const perSet=allSets.map(set=>{
+      const count=set.rallies.filter(r=>r.participants.includes(p.id)).length;
+      return {number:set.number,count,total:set.rallies.length,percent:set.rallies.length?count/set.rallies.length*100:0,
+        result:`${set.home}:${set.away}`,won:set.winner,segments:segmentsFor(set,p.id)};
+    });
+    const entered=perSet.filter(s=>s.count>0).length;
+    const played=perSet.reduce((sum,s)=>sum+s.count,0);
+    const all=perSet.reduce((sum,s)=>sum+s.total,0);
+    return {player:p,ace,normal,fault,points,total,efficiency,pq,fq,entered,played,all,
+      participation:all?played/all*100:0,perSet};
+  });
+  return {stats,sets,patterns,phases,source:st};
+}
+function segmentsFor(set,id){
+  const out=[];let began=-1;
+  for(let i=0;i<=set.rallies.length;i++){
+    const active=i<set.rallies.length&&set.rallies[i].participants.includes(id);
+    if(active && began<0) began=i;
+    if(!active && began>=0){
+      const before=began===0?[0,0]:scoreAfter(set.rallies,began-1);
+      const end=scoreAfter(set.rallies,i-1);
+      out.push({start:`${before[0]}:${before[1]}`,end:`${end[0]}:${end[1]}`,rallies:i-began});began=-1;
+    }
+  }
+  return out;
+}
+function scoreAfter(rallies,i){if(i<0)return [0,0];const r=rallies[i];return [r.before[0]+(r.winner==='home'?1:0),r.before[1]+(r.winner==='away'?1:0)];}
+function rating(type,value,total){
+  if(value===null)return '–';
+  if(total<10)return 'Wenig Daten';
+  if(type==='efficiency') return value>=15?'Ausgezeichnet':value>=5?'Gut':value>=-5?'Genügend':'Ungenügend';
+  if(type==='pq')return value>=60?'Ausgezeichnet':value>=50?'Gut':value>=40?'Genügend':'Ungenügend';
+  return '–';
+}
+function validateBackup(data){
+  if(!data||data.schema!==VERSION||!Array.isArray(data.teams)||!Array.isArray(data.matches))throw Error('Ungültige oder inkompatible ServeIQ-Datensicherung.');
+  for(const t of data.teams){if(!Array.isArray(t.players))throw Error('Beschädigter Teamkader in Datensicherung.');const nums=t.players.map(p=>Number(p.number));if(nums.some(n=>!Number.isInteger(n)||n<1||n>99)||new Set(nums).size!==nums.length)throw Error('Doppelte oder ungültige Trikotnummern im gesicherten Teamkader.');}
+  for(const m of data.matches){if(!Array.isArray(m.events)||!Number.isInteger(m.cursor)||m.cursor<0||m.cursor>m.events.length||!m.teamSnapshot?.players)throw Error('Beschädigter Spielverlauf in Datensicherung.');}
+  return true;
+}
+
+// excel
+/* Small dependency-free XLSX OpenXML generator using ZIP/STORED entries.
+ * Each sheet contains textual/numeric cells, compatible with Excel/LibreOffice.
+ */
+
+const enc=new TextEncoder();
+const xml=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&apos;');
+function colName(i){let s='';while(i>=0){s=String.fromCharCode(65+i%26)+s;i=Math.floor(i/26)-1;}return s;}
+function sheetXml(rows){const used=Math.max(1,...rows.map(r=>r.length));const end=colName(used-1)+Math.max(rows.length,1);
+  const widths=Array.from({length:used},(_,i)=>Math.max(12,Math.min(42,Math.max(...rows.map(r=>String(r[i]??'').length),0)+3)));
+  const cols=`<cols>${widths.map((w,i)=>`<col min="${i+1}" max="${i+1}" width="${w}" customWidth="1"/>`).join('')}</cols>`;
+  const content=rows.map((row,ri)=>`<row r="${ri+1}">${row.map((v,ci)=>{
+    const addr=colName(ci)+(ri+1),style=ri===0?' s="1"':'';
+    if(typeof v==='number'&&Number.isFinite(v))return `<c r="${addr}"${style}><v>${v}</v></c>`;
+    return `<c r="${addr}"${style} t="inlineStr"><is><t xml:space="preserve">${xml(v)}</t></is></c>`;
+  }).join('')}</row>`).join('');
+  return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><dimension ref="A1:${end}"/><sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><sheetFormatPr defaultRowHeight="18"/>${cols}<sheetData>${content}</sheetData></worksheet>`;
+}
+function crc32(buf){let c=-1;for(const b of buf){c^=b;for(let k=0;k<8;k++)c=(c>>>1)^((c&1)?0xedb88320:0);}return (c^-1)>>>0;}
+function zipFiles(files){const parts=[],central=[];let offset=0;
+  for(const [filename,contents] of files){const name=enc.encode(filename),data=enc.encode(contents),crc=crc32(data);
+    const local=new Uint8Array(30+name.length+data.length),d=new DataView(local.buffer);
+    d.setUint32(0,0x04034b50,true);d.setUint16(4,20,true);d.setUint16(8,0,true);
+    d.setUint32(14,crc,true);d.setUint32(18,data.length,true);d.setUint32(22,data.length,true);
+    d.setUint16(26,name.length,true);local.set(name,30);local.set(data,30+name.length);parts.push(local);
+    const c=new Uint8Array(46+name.length),v=new DataView(c.buffer);
+    v.setUint32(0,0x02014b50,true);v.setUint16(4,20,true);v.setUint16(6,20,true);
+    v.setUint32(16,crc,true);v.setUint32(20,data.length,true);v.setUint32(24,data.length,true);
+    v.setUint16(28,name.length,true);v.setUint32(42,offset,true);c.set(name,46);central.push(c);
+    offset+=local.length;
+  }
+  const centralLen=central.reduce((n,b)=>n+b.length,0),end=new Uint8Array(22),v=new DataView(end.buffer);
+  v.setUint32(0,0x06054b50,true);v.setUint16(8,central.length,true);v.setUint16(10,central.length,true);
+  v.setUint32(12,centralLen,true);v.setUint32(16,offset,true);
+  return new Blob([...parts,...central,end],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});
+}
+function excelBlob(match){const st=replay(match),all=buildStats(match),p=id=>playerLabel(match.teamSnapshot.players.find(x=>x.id===id));
+  const sheets=[];
+  sheets.push(['Spielübersicht',[['ServeIQ – Spielübersicht','Wert'],['Team',match.teamSnapshot.club],['Kategorie',match.teamSnapshot.category],['Saison',match.teamSnapshot.season],['Gegner',match.opponent],['Datum',match.date],['Status',st.finished?'Abgeschlossen':match.archivedEarly?'Nicht abgeschlossen':'Laufend'],['Sätze Interlaken',st.homeSets],['Sätze Gegner',st.awaySets],[],['Satz','Interlaken','Gegner','Gewinner'],...st.sets.map(s=>[s.number,s.home,s.away,s.winner==='home'?'Interlaken':s.winner==='away'?'Gegner':'Offen'])]]);
+  sheets.push(['Service Gesamt',[['Spielerin','Ass','Normal','Servicefehler','Total','Punkte bei Service','Effizienz (%)','Punktquote (%)','Fehlerquote (%)','Gespielte Sätze','Ballwechsel','Einsatzquote (%)'],
+    ...all.stats.map(s=>[p(s.player.id),s.ace,s.normal,s.fault,s.total,s.points,s.efficiency===null?'':+s.efficiency.toFixed(1),s.pq===null?'':+s.pq.toFixed(1),s.fq===null?'':+s.fq.toFixed(1),s.player.position==='L'?'Nicht erfasst':s.entered,s.player.position==='L'?'Nicht erfasst':s.played,s.player.position==='L'?'Nicht erfasst':+s.participation.toFixed(1)])]]);
+  sheets.push(['Service je Satz',[['Satz','Spielerin','Ass','Normal','Servicefehler','Total','Punktquote (%)'],...st.sets.flatMap(set=>buildStats(match,set.number).stats.map(s=>[set.number,p(s.player.id),s.ace,s.normal,s.fault,s.total,s.pq===null?'':+s.pq.toFixed(1)]))]]);
+  sheets.push(['Fehlermuster',[['Satz','Typ','Spielerin A','Spielerin B'],...all.patterns.map(e=>[e.set,e.type==='repeat'?'Wiederholter Fehler':'Aufeinanderfolgende Aufschlägerinnen',p(e.players[0]),e.players[1]?p(e.players[1]):''])]]);
+  sheets.push(['Spielstandsphasen',[['Satz','Spielerin','Phase','Spielstand vor Service','Situation','Satzball','Service','Ballwechsel gewonnen'],...all.phases.map(e=>[e.set,p(e.playerId),e.phase,e.score,e.situation,e.setball,e.kind,e.winner==='home'?'Interlaken':'Gegner'])]]);
+  sheets.push(['Spielerinnen Einsatz',[['Spielerin','Satz','Satzergebnis','Ballwechsel gespielt','Ballwechsel gesamt','Einsatzquote (%)','Einsatzabschnitte (von–bis)'],...all.stats.flatMap(s=>s.perSet.map(x=>[p(s.player.id),x.number,x.result,s.player.position==='L'?'Nicht erfasst':x.count,x.total,s.player.position==='L'?'Nicht erfasst':+x.percent.toFixed(1),s.player.position==='L'?'':x.segments.map(z=>`${z.start} – ${z.end} (${z.rallies})`).join('; ')]))]]);
+  sheets.push(['Wechsel',[['Satz','Typ','Spielstand','Spielerin raus','Spielerin rein','Ballwechsel Nr.'],...st.sets.flatMap(s=>[
+    ...s.substitutions.map(x=>[s.number,'Regulär',x.at.join(':'),p(x.out),p(x.in),x.rallyIndex]),
+])]]);
+  const files=[];
+  files.push(['[Content_Types].xml',`<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>${sheets.map((_,i)=>`<Override PartName="/xl/worksheets/sheet${i+1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join('')}</Types>`]);
+  files.push(['_rels/.rels',`<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`]);
+  files.push(['xl/workbook.xml',`<?xml version="1.0" encoding="UTF-8"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>${sheets.map((s,i)=>`<sheet name="${xml(s[0])}" sheetId="${i+1}" r:id="rId${i+1}"/>`).join('')}</sheets></workbook>`]);
+  files.push(['xl/_rels/workbook.xml.rels',`<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${sheets.map((_,i)=>`<Relationship Id="rId${i+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${i+1}.xml"/>`).join('')}<Relationship Id="rId${sheets.length+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`]);
+  files.push(['xl/styles.xml',`<?xml version="1.0" encoding="UTF-8"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><fonts count="2"><font><sz val="11"/><name val="Aptos"/></font><font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Aptos"/></font></fonts><fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FF123765"/><bgColor indexed="64"/></patternFill></fill></fills><borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="2"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>`]);
+  sheets.forEach((s,i)=>files.push([`xl/worksheets/sheet${i+1}.xml`,sheetXml(s[1])]));
+  return zipFiles(files);
+}
+function downloadBlob(blob,filename){const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);}
+
+// storage
+/** IndexedDB is local to this browser/device. No cloud sync, no external account. */
+
+const dbName='serveiq-local-v02-preview';
+function openDB(){return new Promise((resolve,reject)=>{
+  if(!('indexedDB' in globalThis))return reject(Error('IndexedDB nicht verfügbar'));
+  const r=indexedDB.open(dbName,1);
+  r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains('kv'))r.result.createObjectStore('kv');};
+  r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);
+});}
+// Save to both browser stores. Choose the newest valid revision when starting.
+// This prevents a successful fallback write from being hidden by an older IndexedDB copy.
+async function load(){
+  const candidates=[];
+  try{
+    const db=await openDB();
+    const x=await new Promise((resolve,reject)=>{const t=db.transaction('kv','readonly');const r=t.objectStore('kv').get('state');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});
+    db.close();if(x){validateBackup(x);candidates.push(x);}
+  }catch(err){console.warn('IndexedDB-Laden:',err);}
+  try{
+    const x=JSON.parse(localStorage.getItem('serveiq_v02_preview_emergency')||'null');
+    if(x){validateBackup(x);candidates.push(x);}
+  }catch(err){console.warn('Notfallsicherung-Laden:',err);}
+  if(!candidates.length)return newAppData();
+  return candidates.sort((a,b)=>(Number(b.__savedAt)||0)-(Number(a.__savedAt)||0))[0];
+}
+async function save(x){
+  const snapshot=structuredClone(x);
+  snapshot.__savedAt=Date.now();
+  let localOk=false,dbOk=false;
+  try{localStorage.setItem('serveiq_v02_preview_emergency',JSON.stringify(snapshot));localOk=true;}
+  catch(err){console.warn('Lokale Notfallsicherung fehlgeschlagen:',err);}
+  try{
+    const db=await openDB();
+    await new Promise((resolve,reject)=>{const t=db.transaction('kv','readwrite');t.objectStore('kv').put(snapshot,'state');t.oncomplete=resolve;t.onerror=()=>reject(t.error);t.onabort=()=>reject(t.error);});
+    db.close();dbOk=true;
+  }catch(err){console.warn('IndexedDB-Speicherung fehlgeschlagen:',err);}
+  return localOk||dbOk;
+}
+
+// app
+
+
+
+const root=document.getElementById('app');
+let data=newAppData();
+const ui={view:'teams',teamId:null,sortMode:'number',editingTeam:null,playerId:null,matchId:null,statsId:null,statsReturn:'archive',statsSet:0,statsPlayer:null,
+  info:'',modal:'',menuOpen:true,toast:'',wizardStep:0,draft:null,teamForm:null,pickerPos:0,analysisMode:'',analysisSubject:'team',analysisSet:0,teamDirty:false,startedDraft:false};
+const esc=x=>String(x??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const attrs=x=>esc(x);
+const el=(x)=>document.querySelector(x);
+const icon=(s)=>`<span class="ico" aria-hidden="true">${s}</span>`;
+const who=(m,id)=>playerLabel(m?.teamSnapshot.players.find(p=>p.id===id));
+const pct=x=>x===null?'–':`${x>=0&&x!==0?'+':''}${x.toFixed(1).replace('.',',')} %`;
+const rawpct=x=>x===null?'–':`${x.toFixed(1).replace('.',',')} %`;
+const toast=(msg)=>{ui.toast=msg;render();setTimeout(()=>{if(ui.toast===msg){ui.toast='';render();}},4500);};
+let saving=Promise.resolve();
+let navTimeout;function armNav(){clearTimeout(navTimeout);if(window.matchMedia('(min-width: 900px)').matches)return;navTimeout=setTimeout(()=>{if(!ui.modal&&data.introSeen){ui.menuOpen=false;document.querySelector('.bottom-nav')?.classList.add('is-collapsed');}},8500);}
+window.addEventListener('pointerdown',e=>{if(ui.menuOpen)armNav();},{passive:true});
+window.addEventListener('keydown',()=>{if(ui.menuOpen)armNav();});
+function commit(){
+  data.lastView=ui.view;
+  const snap=structuredClone(data);
+  snap.__savedAt=Date.now();
+  // Save immediately before a user can close the tab; asynchronous IndexedDB is a second copy.
+  try{localStorage.setItem('serveiq_v02_preview_emergency',JSON.stringify(snap));}
+  catch(err){console.warn('Sofortsicherung nicht verfügbar:',err);}
+  saving=saving.catch(()=>false).then(()=>save(snap)).then(ok=>{
+    if(!ok)showAlert('Der Spielstand konnte nicht gespeichert werden. Bitte Browser-Speicher prüfen und sofort eine JSON-Sicherung erstellen.');
+    return ok;
+  });
+}
+function showAlert(msg){ui.modal='alert';ui.alertText=msg;render();}
+// Team saving: validate all fields, persist reliably, only then navigate.
+let teamSaveBusy=false;
+async function saveTeamFromFields(){
+  if(teamSaveBusy)return;
+  const form=document.querySelector('form[data-form="team"]');
+  if(!form){showAlert('Teamformular nicht gefunden. Bitte erneut öffnen.');return;}
+  const values=Object.fromEntries(new FormData(form));
+  const club=(values.club||'').trim();
+  const category=values.category||'';
+  const league=values.league||'';
+  const season=values.season||'';
+  const group=values.group||'';
+  if(!club){form.querySelector('[name="club"]')?.focus();showAlert('Bitte zuerst den Verein eingeben.');return;}
+  if(!['Damen','Herren','Juniorinnen','Mixed'].includes(category)||!categoryLeagues(category).includes(league)){
+    showAlert('Kategorie und Liga passen nicht zusammen. Bitte kontrollieren.');return;
+  }
+  if(!seasonOptions().includes(season)||!['','A','B','C','D'].includes(group)){
+    showAlert('Bitte Saison und Gruppe kontrollieren.');return;
+  }
+  const current=ui.teamForm;
+  if(!current){showAlert('Teamerstellung nicht mehr aktiv. Bitte erneut öffnen.');return;}
+  const duplicate=data.teams.find(x=>x.id!==current.id &&
+    [x.club,x.category,x.league,x.group||'',x.season].join('|').toLocaleLowerCase('de-CH')===
+    [club,category,league,group,season].join('|').toLocaleLowerCase('de-CH'));
+  if(duplicate){showAlert('Dieses Team ist für die gewählte Saison bereits vorhanden. Bitte öffne es in der Teamübersicht.');return;}
+  const team={...current,club,category,league,season,group,players:current.players||[]};
+  const before=structuredClone(data);
+  const idx=team.id?data.teams.findIndex(x=>x.id===team.id):-1;
+  if(team.id&&idx<0){showAlert('Team nicht gefunden. Bitte erneut öffnen.');return;}
+  if(idx>=0)data.teams[idx]=team;
+  else {team.id=uid();data.teams.push(team);}
+  data.lastView='teams';
+  teamSaveBusy=true;
+  const button=form.querySelector('[data-action="team-save"]');
+  if(button){button.disabled=true;button.textContent='Speichere …';}
+  try {
+    await saving;
+    let done=await Promise.race([save(structuredClone(data)),new Promise(resolve=>setTimeout(()=>resolve(false),3500))]);
+    if(!done){
+      try {localStorage.setItem('serveiq_v02_preview_emergency',JSON.stringify(data));done=true;}catch{}
+    }
+    if(!done)throw Error('Der Browser blockiert die lokale Speicherung. Öffne die Datei in einem regulären Browserfenster (nicht im privaten Modus) oder verwende später GitHub Pages.');
+    ui.teamId=team.id;ui.teamForm=null;ui.editingTeam=false;ui.view='teams';
+    ui.toast='Team «'+club+'» gespeichert. Kader erfassen.';
+    renderAtTop();
+    setTimeout(()=>{if(ui.toast.startsWith('Team «')){ui.toast='';render();}},4000);
+  }catch(err){
+    data=before;
+    if(button){button.disabled=false;button.textContent='Team speichern';}
+    showAlert('Team konnte nicht gespeichert werden: '+(err.message||String(err)));
+  }finally{teamSaveBusy=false;}
+}
+// Save roster entries with the same verified persistence model as team creation.
+let playerSaveBusy=false;
+async function savePlayerFromFields(){
+  if(playerSaveBusy)return;
+  const form=document.querySelector('form[data-form="player"]');
+  if(!form){showAlert('Spielerinnenformular nicht gefunden. Bitte erneut öffnen.');return;}
+  const values=Object.fromEntries(new FormData(form));
+  const first=(values.first||'').trim(),last=(values.last||'').trim();
+  const position=values.position||'';
+  const number=values.number===''?NaN:Number(values.number);
+  // Keep the form fully populated if any check or browser write fails.
+  ui.playerDraft={first,last,position,number:values.number};
+  const t=data.teams.find(t=>t.id===ui.teamId);
+  let error='';
+  if(!t)error='Das ausgewählte Team wurde nicht gefunden.';
+  else if(!first)error='Bitte den Vornamen eingeben.';
+  else if(!last)error='Bitte den Nachnamen eingeben.';
+  else if(!Number.isInteger(number)||number<1||number>99)error='Bitte eine Trikotnummer von 1 bis 99 auswählen.';
+  else if(t.players.some(p=>Number(p.number)===number&&p.id!==ui.playerId))error='Diese Trikotnummer ist bereits vergeben. Bitte eine andere Nummer auswählen.';
+  else if(!['','A','M','P','D','L'].includes(position))error='Bitte eine gültige Position auswählen.';
+  if(error){ui.playerSaveError=error;render();return;}
+  const before=structuredClone(data);
+  const player={id:ui.playerId||uid(),first,last,number,position};
+  if(ui.playerId){
+    const i=t.players.findIndex(p=>p.id===ui.playerId);
+    if(i<0){ui.playerSaveError='Spielerin wurde nicht gefunden. Bitte neu öffnen.';render();return;}
+    t.players[i]=player;
+  }else t.players.push(player);
+  playerSaveBusy=true;
+  const button=form.querySelector('[data-action="player-save"]');
+  if(button){button.disabled=true;button.textContent='Speichere …';}
+  try{
+    const snap=structuredClone(data);
+    // Await prior writes and persist a complete snapshot, not only a UI update.
+    saving=saving.catch(()=>false).then(()=>save(snap));
+    let stored=await Promise.race([saving,new Promise(resolve=>setTimeout(()=>resolve(false),3500))]);
+    if(!stored){try{localStorage.setItem('serveiq_v02_preview_emergency',JSON.stringify(snap));stored=true;}catch{}}
+    if(!stored)throw Error('Der Browser erlaubt keine lokale Speicherung. Bitte öffne die HTML-Datei in Chrome oder Edge in einem normalen Fenster.');
+    ui.modal='';ui.playerId=null;ui.playerDraft=null;ui.playerSaveError='';ui.numberChoice=null;ui.playerNumberPage=0;
+    ui.toast='Spielerin «'+first+' '+last+'» gespeichert.';
+    renderAtTop();
+    setTimeout(()=>{if(ui.toast.startsWith('Spielerin «')){ui.toast='';render();}},4000);
+  }catch(err){
+    data=before;
+    ui.playerSaveError='Spielerin konnte nicht gespeichert werden: '+(err.message||String(err));
+    render();
+  }finally{playerSaveBusy=false;}
+}
+// Explicit save buttons never navigate before the persisted state is confirmed.
+let explicitSaveBusy=false;
+async function persistBeforeNavigation(mutator,label){
+  if(explicitSaveBusy)return false;
+  explicitSaveBusy=true;
+  const old=structuredClone(data);
+  try{
+    mutator();
+    data.lastView='teams';
+    const snap=structuredClone(data);
+    saving=saving.catch(()=>false).then(()=>save(snap));
+    let stored=await Promise.race([saving,new Promise(resolve=>setTimeout(()=>resolve(false),3500))]);
+    if(!stored){try{localStorage.setItem('serveiq_v02_preview_emergency',JSON.stringify(snap));stored=true;}catch{}}
+    if(!stored)throw Error('Dein Browser hat die lokale Speicherung blockiert. Bitte öffne die Datei in einem normalen Browserfenster.');
+    ui.toast=label;
+    return true;
+  }catch(err){
+    data=old;
+    showAlert('Speichern fehlgeschlagen: '+(err.message||String(err)));
+    return false;
+  }finally{explicitSaveBusy=false;}
+}
+function mcurrent(){return data.matches.find(m=>m.id===ui.matchId)||null;}
+function activeMatches(){return data.matches.filter(m=>!m.archivedEarly&&!replay(m).finished);}
+function activeMatch(){return activeMatches()[0]||null;}
+function playersFor(team){return [...(team?.players||[])].sort((a,b)=>a.number-b.number);}
+function lineupHuman(set,m){return set.slots.map((s,i)=>`<div class="roster-entry"><span class="circle-number">${i+1}</span><span>${esc(who(m,s.playerId))}${s.libero?` <small class="tag">Libera auf Feld</small>`:''}</span></div>`).join('');}
+function header(title='',subtitle=''){return `<header class="topbar"><button class="brand brand-button" data-action="home" aria-label="Zum Home-Screen"><span class="brand-mark">◉</span><span>Serve<span class="iq">IQ</span></span></button><button class="settings-trigger" data-action="settings" title="Einstellungen">⚙</button></header>${subtitle?`<p class="muted header-sub">${esc(subtitle)}</p>`:''}`;}
+const back=(action='home',text='Zurück')=>`<button class="textlink backbutton" data-action="${action}">← ${text}</button>`;
+function homeScreen(){return `<div class="home-view"><div class="home-crest">🏐</div><h1>Serve<span class="iq-color">IQ</span></h1><p>Volleyball – Service – Score Tracker</p><small>Funktionsvorschau 0.2 · 6:6 · GitHub-Testversion</small></div>`;}
+function settingsScreen(){return `${back()}<h1>Einstellungen</h1><div class="panel form-stack"><button class="btn secondary" data-action="json-export">⇩ Datensicherung erstellen (JSON)</button><button class="btn secondary" data-action="json-import">⇧ Datensicherung importieren (JSON)</button><p class="small muted">Die Daten bleiben lokal auf diesem Gerät. Für die Übertragung auf andere Geräte eine JSON-Sicherung exportieren.</p><small>ServeIQ 0.2 · GitHub-Testversion</small></div>`;}
+function shell(content){return `${header()}<main class="main">${content}</main><nav class="bottom-nav ${ui.menuOpen?'':'is-collapsed'}" aria-label="Hauptnavigation"><button type="button" class="nav-handle" data-action="nav-handle" aria-label="Navigation einblenden"><span></span></button><button data-action="nav" data-view="teams" class="nav-item ${ui.view==='teams'?'active':''}">${icon('♙')}<span>Teams</span></button><button data-action="nav" data-view="new" class="nav-item ${ui.view==='new'?'active':''}">${icon('＋')}<span>Neues Spiel</span></button><button data-action="nav" data-view="live" class="nav-item ${ui.view==='live'?'active':''}">${icon('◉')}<span>Live-Game</span></button><button data-action="nav" data-view="archive" class="nav-item ${ui.view==='archive'?'active':''}">${icon('▤')}<span>Archiv</span></button></nav>${ui.toast?`<div class="toast" role="status">${esc(ui.toast)}</div>`:''}${modalHtml()}`;}
+function renderAtTop(){render();requestAnimationFrame(()=>window.scrollTo({top:0,behavior:'instant'}));}
+function render(){const prevModal=root.querySelector('.nextset-modal');const previousModalScroll=prevModal?.scrollTop||0;const prevY=window.scrollY;if(!data.introSeen){root.innerHTML=`<main class="splash"><div class="splash-ball">🏐</div><div class="wordmark">Serve<span>IQ</span></div><p>Volleyball – Service – Score Tracker</p><button class="btn primary huge" data-action="intro">START</button><small>Funktionsprototyp · Version 0.2</small></main>`;return;}
+  let content=ui.view==='home'?homeScreen():ui.view==='settings'?settingsScreen():ui.view==='teams'?teamsScreen():ui.view==='new'?newScreen():ui.view==='live'?liveScreen():archiveScreen();
+  root.innerHTML=shell(content);if(ui.modal==='nextset'){const nextModal=root.querySelector('.nextset-modal');if(nextModal)nextModal.scrollTop=previousModalScroll;}if(prevY&&ui.modal==='nextset')window.scrollTo(0,prevY); }
+function ongoingCards() {
+  return activeMatches().map(m=>{
+    const st=replay(m),c=st.current;
+    return `<section class="panel ongoing-card"><div class="ongoing-top"><b>Laufendes Spiel</b><span class="game-indicator">● Gespeichert</span></div><h3>${esc(m.teamSnapshot.club)} – ${esc(m.opponent)}</h3><p class="muted small">Satz ${c?.number||1} · Spielstand ${c?`${c.home}:${c.away}`:'0:0'} · Sätze ${st.homeSets}:${st.awaySets}</p><div class="action-row"><button class="btn primary" data-action="open-live" data-id="${m.id}">Spiel öffnen</button><button class="btn danger-ghost" data-action="ongoing-delete" data-id="${m.id}">Löschen</button></div></section>`;
+  }).join('');
+}
+function draftCard() {
+  if(!data.draft)return '';
+  const team=data.teams.find(x=>x.id===data.draft.teamId);
+  return `<section class="panel"><b>Gespeicherter Entwurf</b><h3>${esc(team?.club||'Team')} – ${esc(data.draft.opponent||'Gegner noch offen')}</h3><p class="muted small">Spielvorbereitung noch nicht abgeschlossen</p><button class="btn secondary wide" data-action="resume-draft">Vorbereitung fortsetzen</button></section>`;
+}
+function teamsScreen(){
+  if(ui.editingTeam)return teamEditor();
+  const team=data.teams.find(x=>x.id===ui.teamId);
+  if(team)return teamDetails(team);
+  return `<section class="screen-head"><div><h1>Teams</h1><p>Startseite · Mannschaften und Spiele</p></div><button class="btn primary" data-action="new-team">＋ Neues Team</button></section>
+   ${activeMatches().length||data.draft?`<h2>Laufende Spiele</h2>${ongoingCards()}${draftCard()}`:''}
+   <button class="btn primary wide start-game-from-home" data-action="home-start-wizard" ${data.teams.length?'':'disabled'}>＋ Spiel erstellen</button>
+   <h2>Vorhandene Teams</h2>${data.teams.length?data.teams.map(t=>`<button class="item-card" data-action="team-open" data-id="${t.id}"><span><strong>${esc(t.club)}</strong><small>${esc(t.category)} · ${esc(t.league)}${t.group?` · Gruppe ${esc(t.group)}`:''}</small><small>${esc(t.season)}</small></span>${icon('›')}</button>`).join(''):'<div class="empty">Noch keine Teams vorhanden.</div>'}`;
+}
+const seasonOptions=()=>{const date=new Date();let y=date.getFullYear();if(date.getMonth()<9)y--;return Array.from({length:6},(_,i)=>`${y+i}/${String((y+i+1)%100).padStart(2,'0')}`);};
+const selectOpt=(opts,val)=>opts.map(v=>`<option value="${attrs(v)}" ${val===v?'selected':''}>${esc(v)}</option>`).join('');
+function teamEditor(){const t=ui.teamForm||{};return `${back('team-cancel')}<div class="screen-head"><div><h1>${t.id?'Team bearbeiten':'Neues Team'}</h1><p>Verein · Saison · Kategorie</p></div></div>
+  <form data-form="team" class="panel form-stack">
+    <label>Verein<input name="club" required maxlength="90" placeholder="z. B. VBC Interlaken" value="${attrs(t.club||'')}"></label>
+    <label>Saison<select name="season">${selectOpt(seasonOptions(),t.season||seasonOptions()[0])}</select></label>
+    <label>Kategorie<select name="category" data-action="category-change">${selectOpt(['Damen','Herren','Juniorinnen','Mixed'],t.category||'Damen')}</select></label>
+    <label>Liga / Altersklasse<select name="league" id="league-select">${selectOpt(categoryLeagues(t.category||'Damen'),t.league||categoryLeagues(t.category||'Damen')[0])}</select></label>
+    <label>Gruppe<select name="group">${selectOpt(['','A','B','C','D'],t.group||'')}</select></label>
+    <div class="action-row"><button class="btn primary" type="button" data-action="team-save">Team speichern</button><button class="btn secondary" type="button" data-action="team-cancel">Abbrechen</button></div>
+    <p class="small muted">Nach dem Speichern öffnet sich direkt der Teamkader. Von dort gelangst du mit «Speichern» zur Startseite «Teams».</p>
+  </form>`;}
+function categoryLeagues(c){return c==='Damen'?['2. Liga','3. Liga','4. Liga','5. Liga']:c==='Herren'?['2. Liga','3. Liga','4. Liga']:c==='Juniorinnen'?['U23','U20','U18','U16','U14','Kids Volley']:['Mixed'];}
+function teamDetails(t){const rows=playersFor(t);if(ui.sortMode==='position'){const order=['P','M','A','D','L',''];rows.sort((a,b)=>order.indexOf(a.position||'')-order.indexOf(b.position||'') || a.number-b.number);}return `<section class="screen-head"><div><button class="textlink" data-action="team-back">‹ Alle Teams</button><h1>${esc(t.club)}</h1><p>${esc(teamName(t))}</p></div></section>
+    <div class="action-row"><button class="btn secondary" data-action="team-edit" data-id="${t.id}">Team bearbeiten</button><button class="btn danger-ghost" data-action="team-delete" data-id="${t.id}">Löschen</button></div>
+    <div class="screen-head tighter"><h2>Kader</h2></div><div class="roster-toolbar"><button class="btn primary" data-action="player-new">＋ Spielerin</button><button class="btn secondary" data-action="roster-sort">Sortierung: ${ui.sortMode==='number'?'Nr.':'Position'}</button></div>
+    ${rows.length?rows.map(p=>`<button class="item-card" data-action="player-edit" data-id="${p.id}"><span class="circle-number">${p.number}</span><span><strong>${esc(p.first)} ${esc(p.last)}</strong><small>${esc(({P:'Pass',M:'Mitte',A:'Aussen',D:'Diagonal',L:'Libera'})[p.position]||'Position offen')}</small></span>${icon('›')}</button>`).join(''):'<div class="empty">Noch keine Spielerinnen im Kader.</div>'}
+    <p class="small muted">Spielhistorie und Statistiken behalten die damaligen Spielerinnendaten auch nach Änderungen im Team.</p>
+    <button class="btn primary huge wide roster-finish" data-action="roster-save">Speichern</button>`;}
+function playerModal(){const t=data.teams.find(x=>x.id===ui.teamId),p=t?.players.find(x=>x.id===ui.playerId);if(!t)return '';
+  const base=ui.playerNumberPage||0,low=base*20+1,high=Math.min(99,low+19);
+  return `<div class="modal-backdrop" data-action="modal-backdrop"><section class="modal" role="dialog" aria-modal="true"><h2>${p?'Spielerin bearbeiten':'Spielerin hinzufügen'}</h2>
+    <form data-form="player" class="form-stack"><label>Vorname<input name="first" autofocus required autocomplete="off" value="${attrs(ui.playerDraft?.first??p?.first??'')}"></label><label>Nachname<input name="last" required autocomplete="off" value="${attrs(ui.playerDraft?.last??p?.last??'')}"></label>
+    <label>Position<select name="position">${selectOpt(['','P','M','A','D','L'],ui.playerDraft?.position??p?.position??'')}</select></label>
+    <label>Trikotnummer<input type="number" name="number" inputmode="numeric" min="1" max="99" step="1" required placeholder="1–99" value="${attrs(ui.playerDraft?.number??ui.numberChoice??p?.number??'')}"></label>
+    <span class="field-label">Oder Trikotnummer auswählen (${low}–${high})</span><div class="number-grid">${Array.from({length:high-low+1},(_,i)=>low+i).map(n=>`<button class="number-choice ${ui.numberChoice===n || (!ui.numberChoice&&p?.number===n)?'selected':''}" type="button" data-action="pick-number" data-number="${n}" ${t.players.some(a=>a.number===n&&a.id!==p?.id)?'disabled':''}>${n}</button>`).join('')}</div>
+    <div class="action-row"><button class="btn secondary" type="button" data-action="number-page" data-dir="-1" ${base===0?'disabled':''}>‹ 20</button><button class="btn secondary" type="button" data-action="number-page" data-dir="1" ${high===99?'disabled':''}>20 ›</button></div>
+    ${ui.playerSaveError?`<div class="notice error" role="alert">${esc(ui.playerSaveError)}</div>`:''}
+    <div class="action-row"><button class="btn primary" type="button" data-action="player-save">Spielerin speichern</button><button class="btn secondary" type="button" data-action="modal-close">Abbrechen</button></div>
+    ${p?`<button class="btn danger-ghost" type="button" data-action="player-delete" data-id="${p.id}">Spielerin löschen</button>`:''}
+    </form></section></div>`;
+}
+function rosterCards(players,ids,action='roster-card') {return `<div class="roster-grid">${players.map(p=>`<button type="button" class="roster-tile ${ids.includes(p.id)?'chosen':''}" data-action="${action}" data-id="${p.id}" aria-pressed="${ids.includes(p.id)}" ${action==='court-player'?'draggable="true"':''}><b>#${p.number} · ${esc(p.position||'–')}</b><span>${esc(p.first)} ${esc(p.last)}</span>${ids.includes(p.id)?'<em>✓</em>':''}</button>`).join('')}</div>`;}
+function courtUi(d,t,isNext=false){
+ const players=t.players.filter(p=>d.rosterIds.includes(p.id)&&p.position!=='L');
+ const gridOrder=[3,2,1,4,5,0];
+ const labelSlot=id=>{
+   const p=t.players.find(x=>x.id===id);
+   if(!p)return '＋';
+   return `<span class="slot-number">#${esc(p.number)} · ${esc(p.position||'–')}</span><span class="slot-name">${esc(p.last)} ${esc(p.first)}</span>`;
+ };
+ return `<div class="court-net">NETZ</div><div class="volley-court" id="volley-court">${gridOrder.map(idx=>`<button class="volley-slot ${d.lineup[idx]?'filled':''}" data-action="${isNext?'next-position':'court-position'}" data-pos="${idx}" data-drop="${idx}"><small>Position ${idx+1}</small><b>${labelSlot(d.lineup[idx])}</b></button>`).join('')}</div><div class="baseline">GRUNDLINIE</div><div class="libero-station"><label>Libera</label><select data-action="${isNext?'next-libero':'libero-select'}"><option value="">Keine Libera</option>${t.players.filter(p=>p.position==='L'&&d.rosterIds.includes(p.id)).map(p=>`<option value="${p.id}" ${d.liberoId===p.id?'selected':''}>${esc(playerLabel(p))}</option>`).join('')}</select><small>Libera. Wird nicht in Statistik erwähnt, da kein Service.</small></div><h3>Spielerinnen auswählen / ziehen</h3>${rosterCards(players,d.lineup.filter(Boolean),'court-player')}<p class="small muted">Kachel antippen und danach Feldposition wählen – oder auf das Feld ziehen.</p>`;
+}
+function lineupValidation(d){let missing=[];if(d.lineup.filter(Boolean).length!==6)missing.push('Sechs reguläre Spielerinnen aufstellen');if(new Set(d.lineup.filter(Boolean)).size!==d.lineup.filter(Boolean).length)missing.push('Spielerin doppelt aufgestellt');if(d.liberoId&&d.lineup.includes(d.liberoId))missing.push('Libera separat auswählen');if(!d.lineup.filter(Boolean).every(id=>d.rosterIds.includes(id)))missing.push('Nur Matchkader-Spielerinnen einsetzen');if(!d.side)missing.push('Spielfeldseite wählen');if(!d.firstServe)missing.push('Ersten Service festlegen');return missing;}
+function newScreen(){
+ if(!ui.draft){return `${back()}<section class="screen-head"><h1>Neues Spiel</h1></section>${ongoingCards()}${draftCard()}<button class="btn primary huge wide" data-action="start-wizard" ${data.teams.length?'':'disabled'}>＋ Spiel erstellen</button>${data.teams.length?'':'<p>Bitte zuerst ein Team erstellen. Mindestens sechs reguläre Spielerinnen werden für die Startaufstellung benötigt.</p>'}`;}
+ const d=ui.draft,t=data.teams.find(x=>x.id===d.teamId);const hdr=`${back('wizard-exit')}<h1>Neues Spiel · ${['Spieldaten','Matchkader','Startaufstellung','Zusammenfassung'][ui.wizardStep]}</h1>`;
+ if(ui.wizardStep===0)return `${hdr}<form class="panel form-stack" data-form="match-basic"><label>Eigenes Team<select name="teamId" required>${data.teams.map(t=>`<option value="${t.id}" ${t.id===d.teamId?'selected':''}>${esc(teamName(t))}</option>`).join('')}</select></label><label>Gegner<input name="opponent" placeholder="Gegnerischer Verein" required value="${attrs(d.opponent)}"></label><label>Datum<input name="date" type="date" required value="${attrs(d.date)}"></label><button class="btn primary" type="button" data-action="match-basic-save">Matchkader erstellen</button></form>`;
+ if(!t)return `${hdr}<p>Team nicht gefunden.</p>`;
+ if(ui.wizardStep===1)return `${hdr}<p class="muted">Spielerinnen antippen, um sie in den Matchkader aufzunehmen.</p>${rosterCards(playersFor(t),d.rosterIds)}${t.players.filter(p=>p.position!=='L').length<6?'<div class="notice mild">Für die Startaufstellung brauchst du mindestens sechs reguläre Spielerinnen im Teamkader. Die Spieldaten sind bereits gespeichert. Ergänze den Teamkader über «Teams» und setze die Vorbereitung anschliessend fort.</div>':''}<p class="muted small">Ausgewählt: ${d.rosterIds.length} · mindestens 6 reguläre Spielerinnen</p><div class="action-row"><button class="btn primary" data-action="wizard-next" ${t.players.filter(p=>d.rosterIds.includes(p.id)&&p.position!=='L').length>=6?'':'disabled'}>Weiter zur Aufstellung 1. Satz</button><button class="btn secondary" data-action="wizard-back">Zurück</button></div>`;
+ if(ui.wizardStep===2)return `${hdr}<p class="muted">Sechs Spielerinnen auf die Rotationspositionen setzen.</p>${courtUi(d,t)}<div class="panel form-stack"><strong>Spielfeldseite VBC Interlaken</strong><div class="seg"><button class="btn ${d.side==='left'?'primary':'secondary'}" data-action="set-side" data-val="left">← Links</button><button class="btn ${d.side==='right'?'primary':'secondary'}" data-action="set-side" data-val="right">Rechts →</button></div><strong>Erster Service</strong><div class="seg"><button class="btn ${d.firstServe==='home'?'primary':'secondary'}" data-action="set-serve" data-val="home">${esc(t.club)}</button><button class="btn ${d.firstServe==='away'?'primary':'secondary'}" data-action="set-serve" data-val="away">${esc(d.opponent)}</button></div></div>${ui.missing?.length?`<div class="notice error"><b>Noch zu erledigen:</b><ul>${ui.missing.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}<button class="btn primary huge wide" data-action="wizard-next">Zusammenfassung</button>`;
+ return `${hdr}<div class="panel form-stack"><p><b>${esc(t.club)} – ${esc(d.opponent)}</b><br>${esc(d.date)}</p><h3>Startaufstellung</h3>${d.lineup.map((id,i)=>`<div>Position ${i+1}: ${esc(playerLabel(t.players.find(p=>p.id===id)))}</div>`).join('')}<p>Libera: ${d.liberoId?esc(playerLabel(t.players.find(p=>p.id===d.liberoId))):'keine'}<br>Spielfeldseite: ${d.side==='left'?'links':'rechts'}<br>Erster Service: ${d.firstServe==='home'?esc(t.club):esc(d.opponent)}</p><button class="btn primary huge" data-action="confirm-match">Spiel speichern</button><button class="btn secondary" data-action="wizard-back">Zurück / korrigieren</button></div>`;
+}
+// Counter follows the physical side: team name, points and won sets move together.
+function scoreBoard(m,st,s,highlightServe=true){
+ const leftHome=s.side==='left';
+ const own=`<div class="score-team ${highlightServe&&s.server==='home'?'serving home-serving':''}" data-score-team="home"><small>${esc(m.teamSnapshot.club)}</small><span>${s.home}</span></div>`;
+ const guest=`<div class="score-team ${highlightServe&&s.server==='away'?'serving away-serving':''}" data-score-team="away"><small>${esc(m.opponent)}</small><span>${s.away}</span></div>`;
+ const wonLeft=leftHome?st.homeSets:st.awaySets,wonRight=leftHome?st.awaySets:st.homeSets;
+ const middle=`<div class="score-set"><small>Satz ${s.number}</small><strong>${wonLeft} : ${wonRight}</strong><small>Sätze</small></div>`;
+ return `<div class="scoreboard" data-field-side="${leftHome?'interlaken-links':'interlaken-rechts'}">${leftHome?own+middle+guest:guest+middle+own}</div>`;
+}
+function liveScreen(){let m=mcurrent();if(!m||m.archivedEarly)m=activeMatch();
+ if(!m)return `${back()}<h1>Live-Game</h1><div class="empty">Kein laufendes Spiel vorhanden.<br><button class="btn primary" data-action="nav" data-view="new">Neues Spiel eröffnen</button></div>`;
+ ui.matchId=m.id;const st=replay(m),s=st.current;if(st.error)return `${back()}<div class="notice error"><b>Spielverlauf fehlerhaft</b><p>${esc(st.error)}</p><button class="btn secondary" data-action="nav" data-view="teams">Zu Teams</button><button class="btn secondary" data-action="json-export">Datensicherung herunterladen</button></div>`;
+ if(!s||s.winner)return endOfSet(m,st);
+ const activeP=m.teamSnapshot.players.find(p=>p.id===s.slots[0]?.playerId);const sideLeft=s.side==='left';
+ let buttons='';
+ if(s.server==='home'&&!s.pending){const serviceStack=`<div class="service-action-stack"><button class="btn big-action ace" data-action="rally" data-kind="ace" data-winner="home">Ass</button><button class="btn big-action normal" data-action="normal">Normaler Service</button><button class="btn big-action fault" data-action="rally" data-kind="fault" data-winner="away">Servicefehler</button></div>`;const freeSide=`<div class="service-empty-side" aria-hidden="true"></div>`;buttons=`<div class="service-actions" data-field-side="${sideLeft?'interlaken-links':'interlaken-rechts'}">${sideLeft?serviceStack+freeSide:freeSide+serviceStack}</div>`;}
+ else {const h=`<button class="btn point-home" data-action="rally" data-kind="${s.pending?'normal':'opponent'}" data-winner="home">Punkt<br>${esc(m.teamSnapshot.club)}</button>`;const g=`<button class="btn point-away" data-action="rally" data-kind="${s.pending?'normal':'opponent'}" data-winner="away">Punkt<br>${esc(m.opponent)}</button>`;buttons=`<div class="point-buttons" data-field-side="${sideLeft?'interlaken-links':'interlaken-rechts'}">${sideLeft?h+g:g+h}</div>`;}
+ return `${back()}${scoreBoard(m,st,s)}<div class="current-player"><small>AM SERVICE</small><h1>${s.server==='home'?esc(who(m,s.slots[0].playerId)):esc(m.opponent)}</h1>${s.server==='home'?`<p>Position: ${esc(({P:'Passeuse',M:'Mitte',A:'Aussen',D:'Diagonal',L:'Libera'})[activeP?.position]||'–')} · ${esc(m.teamSnapshot.club)}</p>`:''}</div>${s.sideSwitchJustHappened?'<div class="notice">Seitenwechsel im 5. Satz bei 8 Punkten automatisch erfasst.</div>':''}${buttons}<div class="controls" role="group" aria-label="Spielaktionen"><button class="btn control" data-action="point-undo" ${canUndoPoint(m)?'':'disabled'} title="Letzten abgeschlossenen Punkt mit Service und Statistik zurücknehmen">↶<small>Punkt zurücknehmen</small></button><button class="btn control" data-action="change-open" title="Spielerin auswechseln">⇄<small>Wechsel</small></button><button class="btn control" data-action="stats-open" data-id="${m.id}" title="Statistik anzeigen">▥<small>Statistik</small></button><button class="btn control" data-action="point-redo" ${canRedoPoint(m)?'':'disabled'} title="Zuvor zurückgenommenen Punkt mit Statistik wiederherstellen">↷<small>Punkt vorwärts</small></button></div><div class="secondary-controls"><button class="textlink" data-action="side-toggle">←→ Seite korrigieren</button><button class="textlink danger" data-action="stop-open">Spiel abbrechen ···</button></div>`;
+}
+function endOfSet(m,st){const s=st.current;return `${back()}${s.winner==='home'?'<div class="confetti" aria-hidden="true">🎉 ✨ 🎊 ✨ 🎉</div>':''}${scoreBoard(m,st,s,false)}
+ <div class="win-panel">🏆<h1>${st.finished?'Spiel beendet':`Satz ${s.number} beendet`}</h1><p>${s.winner==='home'?esc(m.teamSnapshot.club):esc(m.opponent)} gewinnt ${s.home}:${s.away}</p>
+ <div class="action-row">${st.finished?`<button class="btn primary" data-action="stats-open" data-id="${m.id}">Spielstatistik</button><button class="btn secondary" data-action="nav" data-view="archive">Zum Archiv</button>`:`<button class="btn primary" data-action="prepare-set">Nächsten Satz vorbereiten</button><button class="btn secondary" data-action="stats-open" data-id="${m.id}">Satzstatistik</button>`}</div></div>
+ <div class="action-row endset-point-correction"><button class="btn secondary" data-action="point-undo" ${canUndoPoint(m)?'':'disabled'}>↶ Punkt zurücknehmen</button><button class="btn secondary" data-action="point-redo" ${canRedoPoint(m)?'':'disabled'}>↷ Punkt vorwärts</button></div>`;
+}
+function archiveScreen(){if(ui.statsId)return statsScreen();
+  const sorted=data.matches.filter(m=>m.archivedEarly||replay(m).finished).sort((a,b)=>b.createdAt.localeCompare(a.createdAt));
+  return `${back()}<section class="screen-head"><div><h1>Archiv</h1><p>Alle gespeicherten Spiele</p></div></section>${sorted.length?sorted.map(m=>{
+    const st=replay(m),last=st.current,status=st.finished?'Abgeschlossen':m.archivedEarly?'Nicht abgeschlossen':'Laufend';
+    return `<div class="archive-card"><div class="archive-head"><strong>${esc(m.teamSnapshot.club)} – ${esc(m.opponent)}</strong><span class="tag">${status}</span></div><div class="archive-score">${st.homeSets} : ${st.awaySets} <small>Sätze</small></div><p class="muted small">${esc(m.date)} · ${esc(m.teamSnapshot.category)} · ${esc(m.teamSnapshot.season)}</p><p class="muted small">${st.sets.map(s=>`${s.home}:${s.away}${!s.winner?' (offen)':''}`).join(' · ')||'Noch kein Satz'}</p>
+    <div class="action-row"><button class="btn secondary" data-action="stats-open" data-id="${m.id}">Auswertung</button><button class="btn secondary" data-action="excel" data-id="${m.id}">⇩ Excel</button>${status==='Laufend'?`<button class="btn secondary" data-action="open-live" data-id="${m.id}">Fortsetzen</button>`:''}<button class="btn danger-ghost" data-action="match-delete" data-id="${m.id}">Löschen</button></div></div>`;
+  }).join(''):'<div class="empty">Noch keine Spiele gespeichert.</div>'}`;
+}
+function analysisScreen(m){const setNum=ui.analysisSet||0,select=buildStats(m,setNum),team=ui.analysisSubject==='team';const p=select.stats.find(x=>x.player.id===ui.analysisSubject);const target=team?select.stats:p?[p]:[];
+ const sum=k=>target.reduce((s,x)=>s+(x[k]||0),0);const ass=sum('ace'),normal=sum('normal'),fault=sum('fault'),total=ass+normal+fault,points=sum('points');
+ const mode=ui.analysisMode,headline=mode==='service'?'Grafische Analyse':'Qualitätskennzahlen';const descriptors=mode==='service'?[['Ass',ass],['Normaler Service',normal],['Servicefehler',fault],['Total',total]]:[['Service-Effizienz (SE)',total?(ass-fault)/total*100:null],['Punktquote (PQ)',total?points/total*100:null],['Fehlerquote',total?fault/total*100:null]];
+ const percent=mode!=='service';const scale=percent?100:Math.max(1,...descriptors.map(x=>x[1]||0));
+ return `<div class="statistics-nav"><button class="textlink backbutton" data-action="analysis-back">← Zurück</button><button class="btn secondary" data-action="stats-home-close">Schliessen</button></div><h1>${headline}</h1><div class="panel form-stack"><label>Team / Spielerin<select data-action="analysis-subject"><option value="team" ${team?'selected':''}>Gesamtes Team</option>${m.teamSnapshot.players.filter(x=>m.rosterIds.includes(x.id)).map(x=>`<option value="${x.id}" ${ui.analysisSubject===x.id?'selected':''}>${esc(playerLabel(x))}</option>`).join('')}</select></label><label>Zeitraum<select data-action="analysis-set"><option value="0" ${!setNum?'selected':''}>Gesamtes Spiel</option>${replay(m).sets.map(x=>`<option value="${x.number}" ${setNum===x.number?'selected':''}>Satz ${x.number}</option>`).join('')}</select></label>${descriptors.map(([label,val],i)=>`<div class="analysis-metric"><div class="analysis-row"><b>${label}</b><strong>${val===null?'–':percent?`${val.toFixed(1).replace('.',',')} %`:val}</strong></div><div class="analysis-track ${percent?'pct-track':''}">${val!==null?`<div class="analysis-bar ${val<0?'negative':''} ${i===2?'error-bar':''}" style="width:${Math.min(100,Math.abs(val)/scale*100)}%"></div>`:''}</div></div>`).join('')}${percent?`<p class="small muted">${total<10?'Wenig Daten – eingeschränkte Aussagekraft. ':''}Bewertungsgrenzen für SE/PQ sind Orientierungswerte. Bei 0 Services erscheint «–».</p><button class="btn secondary" data-action="info" data-id="qualities">ⓘ Kennzahlen erklären</button>`:'<p class="small muted">Total = Ass + Normaler Service + Servicefehler.</p>'}</div>`;
+}
+function statsScreen(){const m=data.matches.find(x=>x.id===ui.statsId);if(!m){ui.statsId=null;return archiveScreen();}
+  if(ui.analysisMode)return analysisScreen(m);
+  const st=replay(m),v=buildStats(m,ui.statsSet),all=buildStats(m);
+  const label=(id)=>who(m,id);
+  const tableRows=v.stats.map(s=>`<tr data-action="stats-player" data-id="${s.player.id}"><td>${esc(label(s.player.id))}</td><td>${s.ace}</td><td>${s.normal}</td><td>${s.fault}</td><td>${s.total}</td></tr>`).join('');
+  const active=v.stats.find(x=>x.player.id===ui.statsPlayer)||v.stats[0];
+  const perSet=active?.perSet||[];
+  const info=(key)=>`<button class="infobtn" data-action="info" data-id="${key}" aria-label="Erklärung öffnen">ⓘ</button>`;
+  return `<div class="statistics-nav"><button class="textlink" data-action="stats-close">‹ Zurück</button><button class="btn secondary" data-action="stats-home-close">Schliessen</button></div><section class="screen-head"><div><h1>Statistik</h1><p>${esc(m.teamSnapshot.club)} – ${esc(m.opponent)} · ${esc(m.date)}</p></div><button class="btn secondary" data-action="excel" data-id="${m.id}">⇩ Excel</button></section>
+  <div class="chip-scroll"><button class="chip ${ui.statsSet===0?'selected':''}" data-action="stats-filter" data-number="0">Gesamtes Spiel</button>${st.sets.map(s=>`<button class="chip ${ui.statsSet===s.number?'selected':''}" data-action="stats-filter" data-number="${s.number}">Satz ${s.number}</button>`).join('')}</div>
+  <section class="panel"><h2>1. Service-Statistik ${info('service')}</h2><button class="btn secondary" data-action="analysis-open" data-mode="service">▥ Grafische Analyse</button><div class="table-wrap"><table><thead><tr><th>Spielerin</th><th>Ass</th><th>Normal</th><th>Fehler</th><th>Total</th></tr></thead><tbody>${tableRows||'<tr><td colspan="5">Noch keine Services.</td></tr>'}</tbody></table></div><small class="muted">Spielerin antippen für Details.</small></section>
+  <section class="panel"><h2>2. Qualitätskennzahlen ${info('qualities')}</h2><button class="btn secondary" data-action="analysis-open" data-mode="qualities">▥ Diagramm öffnen</button><div class="table-wrap"><table><thead><tr><th>Spielerin</th><th>SE</th><th>PQ</th><th>Fehlerquote</th></tr></thead><tbody>${v.stats.map(s=>`<tr><td>${esc(label(s.player.id))}</td><td>${pct(s.efficiency)}<small>${rating('efficiency',s.efficiency,s.total)}</small></td><td>${rawpct(s.pq)}<small>${rating('pq',s.pq,s.total)}</small></td><td>${rawpct(s.fq)}</td></tr>`).join('')}</tbody></table></div><p class="small muted">Bewertungen unter zehn Services: «Wenig Daten».</p></section>
+  <section class="panel"><h2>3. Servicefehler-Muster ${info('patterns')}</h2>${v.patterns.length?v.patterns.map(x=>`<div class="pattern-entry"><span class="tag">Satz ${x.set}</span><span>${x.type==='repeat'?'Wiederholter Fehler:':'Aufeinanderfolgende Aufschlägerinnen:'} ${x.players.map(label).map(esc).join(' → ')}</span></div>`).join(''):'<p class="muted">Keine entsprechenden Muster erfasst.</p>'}</section>
+  <section class="panel"><h2>4. Spielerinnen-Details ${info('details')}</h2><p class="small muted">Hinweis: Liberawechsel werden nicht erfasst. Die Einsatzwerte regulärer Spielerinnen beziehen sich daher auf die besetzten Rotationsplätze; bei Libera-Einsätzen können tatsächliche Ballwechsel abweichen.</p><label>Spielerin<select data-action="stats-select-player">${v.stats.map(s=>`<option value="${s.player.id}" ${active?.player.id===s.player.id?'selected':''}>${esc(label(s.player.id))}</option>`).join('')}</select></label>
+  ${active?`<div class="metric-grid"><div><b>${active.player.position==='L'?'–':active.entered}</b><small>Gespielte Sätze</small></div><div><b>${active.player.position==='L'?'Nicht erfasst':`${active.played}/${active.all}`}</b><small>Ballwechsel</small></div><div><b>${active.player.position==='L'?'–':rawpct(active.participation)}</b><small>Einsatzquote</small></div></div>
+   <div class="table-wrap"><table><thead><tr><th>Satz</th><th>Endstand*</th><th>Einsatz</th><th>Quote</th></tr></thead><tbody>${perSet.map(s=>`<tr><td>${s.number}</td><td>${s.result}</td><td>${active.player.position==='L'?'–':`${s.count}/${s.total}`}</td><td>${active.player.position==='L'?'–':rawpct(s.percent)}</td></tr>`).join('')}</tbody></table></div><small class="muted">* Bei laufenden Sätzen: aktueller Stand.</small>
+   ${active.player.position==='L'?'<p class="notice mild">Liberawechsel werden nicht erfasst. Deshalb ist der tatsächliche Libera-Einsatz nicht messbar.</p>':''}<h3>Einsatzabschnitte (Punktestand vorher → nachher)</h3>${perSet.flatMap(s=>s.segments.map(seg=>`<p class="small">Satz ${s.number}: ${seg.start} → ${seg.end}, ${seg.rallies} Ballwechsel</p>`)).join('')||'<p class="muted">Noch keine Einsätze.</p>'}`:''}</section>
+  <section class="panel"><h2>5. Spielstandsphasen ${info('phases')}</h2><div class="table-wrap"><table><thead><tr><th>Phase</th><th>Asse</th><th>Normal</th><th>Fehler</th></tr></thead><tbody>${['Start','Aufbau','Entscheidung','Verlängerung'].map(phase=>{const x=v.phases.filter(x=>x.phase===phase);return `<tr><td>${phase}</td><td>${x.filter(x=>x.kind==='ace').length}</td><td>${x.filter(x=>x.kind==='normal').length}</td><td>${x.filter(x=>x.kind==='fault').length}</td></tr>`;}).join('')}</tbody></table></div><p class="small muted">Jeder eigene Service wird anhand des Punktestands vor dem Aufschlag zugeordnet. Satzballsituationen stehen im Excel-Export.</p></section>
+  <section class="panel"><h2>6. Wechsel und Aufstellungen ${info('changes')}</h2>${st.sets.map(s=>`<h3>Satz ${s.number}</h3><p class="small">Start: ${s.slots.map(x=>esc(label(x.starterId))).join(' · ')}</p>${s.substitutions.map(x=>`<p class="small">${x.at.join(':')} · ${esc(label(x.out))} → ${esc(label(x.in))}</p>`).join('')}${s.liberoMoves.map(x=>`<p class="small">${x.at.join(':')} · Libera ${x.enter?'ein':'aus'} für ${esc(label(x.playerId))}</p>`).join('')}` ).join('')}</section>`;
+}
+const infoText={
+  service:`Ass = direkter Punkt durch Aufschlag. Normal = gültiger Aufschlag mit anschliessendem Ballwechsel. Fehler = direkter Punkt Gegner durch Aufschlagfehler. Total = Ass + Normal + Fehler.`,
+  qualities:`Service-Effizienz (SE) = (Asse − Servicefehler) ÷ alle Services × 100. Bewertung: ausgezeichnet ab +15 %, gut ab +5 %, genügend ab −5 %, sonst ungenügend. Punktquote (PQ) = gewonnene Ballwechsel bei eigenen Services ÷ alle eigenen Services × 100. Bewertung: ausgezeichnet ab 60 %, gut ab 50 %, genügend ab 40 %, sonst ungenügend. Fehlerquote = Servicefehler ÷ alle Services × 100. Diese Grenzen sind Orientierungshilfen für Amateurteams, keine offiziellen Normen. Unter 10 Services wenig aussagekräftig.`,
+  patterns:`Wiederholter Fehler: Dieselbe Spielerin beendet einen Servicedurchgang mit Fehler und macht beim nächsten eigenen Servicedurchgang sofort wieder einen Fehler. Aufeinanderfolgende Aufschlägerinnen: Der letzte Service der vorherigen Spielerin war ein Fehler und die nächste Aufschlägerin macht bei ihrem ersten Service ebenfalls einen Fehler. Die Betrachtung beginnt pro Satz neu.`,
+  details:`Gespielte Sätze = Sätze mit mindestens einem Ballwechsel auf dem Feld. Einsatz = eigene Ballwechsel / alle Ballwechsel des Satzes. Beispiel 31/47 = 31 von 47 gespielten Ballwechseln. Einsatzquote = dieser Anteil in Prozent. Die Einsatzabschnitte zeigen den Spielstand vor dem ersten und nach dem letzten Ballwechsel des jeweiligen Einsatzes. Liberawechsel werden nicht erfasst; der tatsächliche Libera-Einsatz ist daher nicht exakt messbar.`,
+  phases:`Sätze 1–4: Start 0–9, Aufbau 10–19, Entscheidung ab 20; Verlängerung ab 24:24. Satz 5: Start 0–5, Aufbau 6–11, Entscheidung ab 12; Verlängerung ab 14:14. Es zählt der höhere Punktestand, ausser in der Verlängerung: dort müssen beide Teams mindestens 24 beziehungsweise 14 erreicht haben. Führung, Gleichstand, Rückstand und Satzball werden je Service im Export geführt.`,
+  changes:`Ein regulärer Wechsel kostet einen der maximal sechs Wechsel pro Satz. Die ausgewechselte Startspielerin darf nur für denselben Ersatz zurückkehren. Liberawechsel werden nicht erfasst. Reguläre Wechsel werden mit Spielstand gespeichert.`
+};
+function modalHtml(){if(!ui.modal)return '';
+  if(ui.modal==='player')return playerModal();
+  if(ui.modal==='draft-exit')return `<div class="modal-backdrop"><div class="modal"><h2>Spielvorbereitung verlassen?</h2><p>Was möchtest du mit den bisherigen Eingaben machen?</p><div class="form-stack"><button class="btn primary" data-action="draft-save">Speichern und zurück</button><button class="btn secondary" data-action="draft-discard">Ohne Speichern zurück</button><button class="btn secondary" data-action="draft-keep">Weiter bearbeiten</button></div></div></div>`;
+  if(ui.modal==='pick-player'||ui.modal==='pick-next'){const d=ui.modal==='pick-next'?ui.nextOptions:ui.draft;const t=ui.modal==='pick-next'?mcurrent()?.teamSnapshot:data.teams.find(t=>t.id===ui.draft.teamId);if(!t)return '';const available=t.players.filter(p=>p.position!=='L'&&(ui.modal==='pick-next'||ui.draft.rosterIds.includes(p.id)));return `<div class="modal-backdrop"><div class="modal"><h2>Position ${ui.pickerPos+1} besetzen</h2><div class="roster-grid">${available.map(p=>`<button class="roster-tile" data-action="pick-slot" data-id="${p.id}"><b>#${p.number} · ${esc(p.position||'–')}</b><span>${esc(p.first)} ${esc(p.last)}</span></button>`).join('')}</div><button class="btn secondary wide" data-action="clear-slot">Position leeren</button><button class="btn secondary wide" data-action="modal-close">Schliessen</button></div></div>`;}
+
+  if(ui.modal==='alert'||ui.modal==='confirm')return `<div class="modal-backdrop"><div class="modal" role="dialog" aria-modal="true"><h2>${ui.modal==='confirm'?'Bitte bestätigen':'Hinweis'}</h2><p>${esc(ui.alertText||'')}</p><div class="action-row">${ui.modal==='confirm'?`<button class="btn danger" data-action="confirm-yes">Ja, ausführen</button><button class="btn secondary" data-action="modal-close">Abbrechen</button>`:`<button class="btn primary" data-action="modal-close">OK</button>`}</div></div></div>`;
+  const m=mcurrent(),s=m&&replay(m).current;
+  if(ui.modal==='stop')return `<div class="modal-backdrop"><div class="modal"><h2>Spiel abbrechen</h2><p>Was soll mit dem Spiel passieren?</p><div class="form-stack"><button class="btn primary" data-action="stop-archive">Im Archiv speichern («Nicht abgeschlossen»)</button><button class="btn danger" data-action="stop-delete">Endgültig löschen</button><button class="btn secondary" data-action="modal-close">Zurück zum Spiel</button></div></div></div>`;
+  if(ui.modal==='change'&&s){return `<div class="modal-backdrop"><div class="modal"><h2>Spielerwechsel</h2><p>Reguläre Wechsel: ${s.regularSubs}/6</p><button class="btn primary wide" data-action="change-type" data-type="regular">Normaler Spielerwechsel</button><button class="btn secondary wide" data-action="modal-close">Schliessen</button></div></div>`;}
+  if(ui.modal==='regular'&&s){
+    // ALL off-court match-roster players are visible; rule-ineligible choices are labelled and disabled.
+    const onCourt=new Set(s.slots.map(sl=>sl.playerId));
+    const outSlots=s.slots.filter(sl=>!sl.libero);
+    const requested=ui.regularOutId;
+    const outgoing=outSlots.find(sl=>sl.playerId===requested)||outSlots[0];
+    const eligible=(id)=>{
+      const player=m.teamSnapshot.players.find(p=>p.id===id);
+      if(!player)return 'Spielerin nicht gefunden';
+      if(id===s.liberoId||player.position==='L')return 'Libera (kein regulärer Wechsel)';
+      if(!outgoing)return 'Keine auswechselbare Spielerin';
+      const pair=s.subPairs[outgoing.starterId];
+      if(pair){
+        if(pair.returned)return 'Rückwechsel bereits erfolgt';
+        if(outgoing.playerId!==pair.subId)return 'Wechselpaar bereits abgeschlossen';
+        if(id!==outgoing.starterId)return 'Nur Rückwechsel der Startspielerin erlaubt';
+      }else{
+        if(outgoing.playerId!==outgoing.starterId)return 'Kein weiterer regulärer Wechsel möglich';
+        if(Object.values(s.subPairs).some(p=>p.subId===id))return 'Bereits als Ersatz eingesetzt';
+        if(s.slots.some(sl=>sl.starterId===id))return 'Startspielerin eines anderen Wechselpaares';
+      }
+      return '';
+    };
+    const bench=m.rosterIds.filter(id=>!onCourt.has(id));
+    const valid=bench.filter(id=>!eligible(id));
+    return `<div class="modal-backdrop"><div class="modal"><h2>Regulärer Spielerwechsel</h2><p class="muted">${s.regularSubs}/6 Wechsel verwendet. Die Spielerinnen der Ersatzbank stammen aus dem Matchkader.</p><form data-form="regular" class="form-stack"><label>Auswechseln<select name="outId" data-action="regular-out">${outSlots.map(sl=>`<option value="${sl.playerId}" ${sl.playerId===outgoing?.playerId?'selected':''}>${esc(who(m,sl.playerId))}</option>`).join('')}</select></label>
+    <label>Einwechseln<select name="inId" ${valid.length?'':'disabled'}>${bench.map(id=>{const reason=eligible(id);return `<option value="${id}" ${reason?'disabled':''}>${esc(who(m,id))}${reason?' – '+esc(reason):''}</option>`;}).join('')}</select></label>${bench.length?'':'<p class="notice mild">Keine Ersatzspielerin im Matchkader ausserhalb des Feldes vorhanden.</p>'}${!valid.length&&bench.length?'<p class="notice mild">Für diese Spielerin ist aktuell kein regelkonformer Wechsel möglich. Bitte eine andere Spielerin bei «Auswechseln» wählen.</p>':''}
+    ${ui.regularError?`<div class="notice error" role="alert">${esc(ui.regularError)}</div>`:''}<button class="btn primary" type="button" data-action="regular-confirm" ${valid.length&&s.regularSubs<6?'':'disabled'}>${ui.regularBusy?'Speichere Wechsel …':'Wechsel bestätigen'}</button><button class="btn secondary" type="button" data-action="modal-close">Abbrechen</button></form></div></div>`;}
+  if(ui.modal==='nextset'&&s){const n=s.number+1,prev=st=>st;const o=ui.nextOptions||{lineup:Array(6).fill(''),rosterIds:m.rosterIds,liberoId:s.liberoId,side:n<=4?(s.side==='left'?'right':'left'):'',firstServe:n<=4?opposite(s.firstServe):''};ui.nextOptions=o;const t=m.teamSnapshot;
+   return `<div class="modal-backdrop"><div class="modal nextset-modal"><h2>Startaufstellung – ${n}. Satz</h2><p class="small muted">Stelle die sechs Spielerinnen für diesen Satz neu auf.</p>${courtUi(o,t,true)}${n===5?`<div class="form-stack"><strong>Spielfeldseite ${esc(t.club)}</strong><div class="seg"><button class="btn ${o.side==='left'?'primary':'secondary'}" data-action="next-side" data-val="left">← Links</button><button class="btn ${o.side==='right'?'primary':'secondary'}" data-action="next-side" data-val="right">Rechts →</button></div><strong>Erster Service</strong><div class="seg"><button class="btn ${o.firstServe==='home'?'primary':'secondary'}" data-action="next-serve" data-val="home">${esc(t.club)}</button><button class="btn ${o.firstServe==='away'?'primary':'secondary'}" data-action="next-serve" data-val="away">${esc(m.opponent)}</button></div></div>`:`<p class="notice mild">Seite und erster Service sind für Satz ${n} automatisch festgelegt.</p>`}${ui.missing?.length?`<div class="notice error">${ui.missing.map(esc).join(' · ')}</div>`:''}<button class="btn primary huge wide" data-action="next-confirm">Satz ${n} starten</button><button class="btn secondary wide" data-action="modal-close">Zurück</button></div></div>`;}
+  if(ui.modal==='info')return `<div class="modal-backdrop"><div class="modal"><h2>ⓘ Erklärung</h2><p>${esc(infoText[ui.info]||'')}</p><button class="btn primary" data-action="modal-close">Schliessen</button></div></div>`;
+  return '';
+}
+// Match basics are saved before moving to the match-roster step.
+// A roster with fewer than six players can still reach the selection screen;
+// the minimum of six *regular* players is enforced before the starting lineup.
+let matchBasicBusy=false;
+async function saveMatchBasicsAndNext(){
+  if(matchBasicBusy)return;
+  const form=root.querySelector('form[data-form="match-basic"]');
+  if(!form){showAlert('Die Spieldaten konnten nicht gefunden werden. Bitte erneut öffnen.');return;}
+  if(!form.reportValidity())return;
+  const values=Object.fromEntries(new FormData(form));
+  const team=data.teams.find(t=>t.id===values.teamId);
+  const opponent=(values.opponent||'').trim();
+  const date=(values.date||'').trim();
+  if(!team){showAlert('Bitte ein gültiges Team auswählen.');return;}
+  if(!opponent){form.querySelector('[name="opponent"]')?.focus();showAlert('Bitte den Gegner eingeben.');return;}
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||Number.isNaN(new Date(date+'T12:00:00').getTime())){
+    form.querySelector('[name="date"]')?.focus();showAlert('Bitte ein gültiges Datum auswählen.');return;
+  }
+  if(new Set(team.players.map(p=>Number(p.number))).size!==team.players.length){
+    showAlert('Im Teamkader gibt es doppelte Trikotnummern. Bitte den Kader zuerst korrigieren.');return;
+  }
+  // Reusing saved drafts preserves the previously selected players when
+  // the basic data remains unchanged; changing the team resets the choices.
+  const old=ui.draft;
+  const sameTeam=old&&old.teamId===team.id;
+  const draft={
+    teamId:team.id,opponent,date,
+    rosterIds:sameTeam?[...old.rosterIds]:[],
+    lineup:sameTeam?[...old.lineup]:Array(6).fill(''),
+    liberoId:sameTeam?old.liberoId:'',
+    side:old?.side||'',firstServe:old?.firstServe||''
+  };
+  const button=form.querySelector('[data-action="match-basic-save"]');
+  matchBasicBusy=true;
+  if(button){button.disabled=true;button.textContent='Speichere …';}
+  try{
+    const ok=await persistBeforeNavigation(()=>{
+      data.draft=structuredClone(draft);
+      data.draftStep=1;
+    },'Spieldaten gespeichert.');
+    if(ok){ui.draft=draft;ui.wizardStep=1;ui.missing=[];renderAtTop();}
+    else if(button?.isConnected){button.disabled=false;button.textContent='Matchkader erstellen';}
+  }catch(err){
+    if(button?.isConnected){button.disabled=false;button.textContent='Matchkader erstellen';}
+    showAlert('Spieldaten konnten nicht gespeichert werden: '+(err.message||String(err)));
+  }finally{matchBasicBusy=false;}
+}
+// Persist a rule-validated substitution before closing its dialog.
+let regularSaving=false;
+async function saveRegularSubstitution(){
+  if(regularSaving)return;
+  const form=root.querySelector('form[data-form="regular"]');
+  const m=mcurrent();
+  if(!form||!m){showAlert('Wechselfenster oder Spiel nicht gefunden.');return;}
+  const outId=form.querySelector('[name="outId"]')?.value;
+  const inId=form.querySelector('[name="inId"]')?.value;
+  if(!outId||!inId){ui.regularError='Bitte beide Spielerinnen auswählen.';render();return;}
+  regularSaving=true;ui.regularError='';
+  const btn=form.querySelector('[data-action="regular-confirm"]');
+  if(btn){btn.disabled=true;btn.textContent='Speichere Wechsel …';}
+  try{
+    // No points/rotation are changed: the incoming player takes the exact current rotation slot.
+    const updated=pushEvent(m,{type:'SUB',outId,inId});
+    const idx=data.matches.findIndex(x=>x.id===m.id);
+    if(idx<0)throw Error('Das laufende Spiel wurde nicht gefunden.');
+    const copy=structuredClone(data);copy.matches[idx]=updated;copy.lastView='live';
+    const snapshot=structuredClone(copy);
+    saving=saving.catch(()=>false).then(()=>save(snapshot));
+    let stored=await Promise.race([saving,new Promise(resolve=>setTimeout(()=>resolve(false),3500))]);
+    if(!stored){try{localStorage.setItem('serveiq_v02_preview_emergency',JSON.stringify(snapshot));stored=true;}catch{}}
+    if(!stored)throw Error('Die lokale Speicherung wurde vom Browser blockiert.');
+    data=copy;ui.modal='';ui.regularOutId=null;ui.regularError='';ui.view='live';
+    ui.toast='Spielerwechsel gespeichert.';
+    renderAtTop();
+    setTimeout(()=>{if(ui.toast==='Spielerwechsel gespeichert.'){ui.toast='';render();}},3500);
+  }catch(err){
+    ui.regularError='Wechsel nicht durchgeführt: '+(err.message||String(err));
+    render();
+  }finally{regularSaving=false;}
+}
+function captureDraftForm(){
+ if(!ui.draft)return;
+ if(ui.wizardStep===0){
+   const f=document.querySelector('form[data-form="match-basic"]');
+   if(f){
+     ui.draft.teamId=f.querySelector('[name="teamId"]')?.value||ui.draft.teamId;
+     ui.draft.opponent=f.querySelector('[name="opponent"]')?.value||'';
+     ui.draft.date=f.querySelector('[name="date"]')?.value||ui.draft.date;
+   }
+ }
+}
+function confirmAction(msg,fn){ui.modal='confirm';ui.alertText=msg;ui.confirmFn=fn;render();}
+function afterEvent(event){const m=mcurrent();try{const x=pushEvent(m,event);data.matches[data.matches.findIndex(k=>k.id===m.id)]=x;commit();render();return true;}catch(err){showAlert(err.message);return false;}}
+function navigate(view){ui.menuOpen=true;armNav();ui.view=view;ui.modal='';ui.teamId=null;ui.editingTeam=null;if(view!=='archive')ui.statsId=null;
+  if(view==='live'){const chosen=data.matches.find(x=>x.id===ui.matchId&&!x.archivedEarly&&!replay(x).finished);const a=chosen||activeMatch();if(a)ui.matchId=a.id;}
+  commit();renderAtTop();}
+root.addEventListener('click',async e=>{
+  const b=e.target.closest('[data-action]');if(!b)return;
+  if(b.tagName==='BUTTON')e.preventDefault();
+  const action=b.dataset.action,id=b.dataset.id;
+  try{switch(action){
+    case'intro':data.introSeen=true;ui.view='teams';ui.menuOpen=true;armNav();commit();render();break;
+    case'home':if(ui.editingTeam){confirmAction('Teamerstellung verlassen? Nicht gespeicherte Eingaben werden verworfen.',()=>{ui.editingTeam=false;ui.teamForm=null;navigate('teams');});break;}if(ui.draft){captureDraftForm();ui.modal='draft-exit';render();break;}navigate('teams');break;
+    case'settings':ui.view='settings';ui.modal='';render();break;
+    case'nav':if(ui.editingTeam){const target=b.dataset.view;confirmAction('Teamerstellung verlassen? Nicht gespeicherte Eingaben werden verworfen.',()=>{ui.editingTeam=false;ui.teamForm=null;navigate(target);});break;}if(ui.draft){captureDraftForm();ui.modal='draft-exit';render();break;}navigate(b.dataset.view);break;
+    case'nav-handle':ui.menuOpen=true;armNav();render();break;
+    case'new-team':ui.teamId=null;ui.editingTeam=true;ui.teamForm={club:'VBC Interlaken',category:'Damen',league:'4. Liga',season:seasonOptions()[0],players:[]};render();break;
+    case'team-open':ui.teamId=id;render();break;
+    case'team-back':ui.teamId=null;render();break;
+    case'roster-sort':ui.sortMode=ui.sortMode==='number'?'position':'number';render();break;
+    case'team-save':await saveTeamFromFields();break;
+    case'player-save':await savePlayerFromFields();break;
+    case'match-basic-save':await saveMatchBasicsAndNext();break;
+    case'roster-save':{if(await persistBeforeNavigation(()=>{},'Team und Saisonkader gespeichert.')){ui.teamId=null;ui.view='teams';ui.modal='';renderAtTop();}break;}
+    case'team-cancel':confirmAction(ui.teamForm?.id?'Änderungen verwerfen und zu Teams zurückkehren?':'Teamerstellung abbrechen? Deine Eingaben werden nicht gespeichert.',()=>{ui.editingTeam=false;ui.teamForm=null;ui.teamId=null;ui.view='teams';renderAtTop();});break;
+    case'team-edit':ui.editingTeam=true;ui.teamForm=structuredClone(data.teams.find(t=>t.id===id));render();break;
+    case'team-delete':confirmAction('Team wirklich löschen? Archivierte Spiele bleiben erhalten.',()=>{data.teams=data.teams.filter(t=>t.id!==id);if(data.draft?.teamId===id){data.draft=null;data.draftStep=0;}if(ui.draft?.teamId===id)ui.draft=null;ui.teamId=null;commit();render();});break;
+    case'player-new':ui.playerId=null;ui.playerDraft=null;ui.playerSaveError='';ui.numberChoice=null;ui.playerNumberPage=0;ui.modal='player';render();root.querySelector('form[data-form="player"] [name="first"]')?.focus({preventScroll:true});break;
+    case'player-edit':{ui.playerId=id;ui.playerDraft=null;ui.playerSaveError='';const p=data.teams.find(t=>t.id===ui.teamId).players.find(p=>p.id===id);ui.numberChoice=p.number;ui.playerNumberPage=Math.floor((p.number-1)/20);ui.modal='player';render();break;}
+    case'player-delete':confirmAction('Spielerin wirklich aus dem Team entfernen?',()=>{const t=data.teams.find(t=>t.id===ui.teamId);t.players=t.players.filter(p=>p.id!==id);ui.modal='';commit();render();});break;
+    case'number-page':ui.playerNumberPage=Math.max(0,Math.min(4,(ui.playerNumberPage||0)+Number(b.dataset.dir)));render();break;
+    case'pick-number':ui.playerSaveError='';ui.numberChoice=Number(b.dataset.number);ui.playerDraft={...(ui.playerDraft||{}),number:String(ui.numberChoice)};document.querySelectorAll('.number-choice').forEach(x=>x.classList.toggle('selected',Number(x.dataset.number)===ui.numberChoice));document.querySelector('form[data-form=player] [name=number]').value=String(ui.numberChoice);document.querySelector('form[data-form=player] [data-action=player-save]')?.focus();break;
+    case'category-change':break;
+    case'cancel-wizard':ui.draft=null;ui.wizardStep=0;render();break;
+    case'wizard-exit':captureDraftForm();ui.modal='draft-exit';render();break;
+    case'resume-draft':ui.draft=structuredClone(data.draft);ui.view='new';ui.wizardStep=Math.min(3,Math.max(0,data.draftStep||0));renderAtTop();break;
+    case'home-start-wizard':ui.view='new';
+    case'start-wizard':{if(data.draft && !ui.draft){confirmAction('Ein gespeicherter Spielentwurf ist vorhanden. Neuen Entwurf beginnen und den bisherigen überschreiben?',()=>{data.draft=null;data.draftStep=0;ui.draft=null;ui.modal='';ui.view='new';root.querySelector('[data-action="start-wizard"]')?.click();});break;}const t=data.teams[0];ui.draft={teamId:t.id,opponent:'',date:new Date().toLocaleDateString('en-CA'),rosterIds:[],lineup:Array(6).fill(''),liberoId:'',side:'',firstServe:''};ui.wizardStep=0;render();break;}
+    case'wizard-back':ui.wizardStep=Math.max(0,ui.wizardStep-1);render();break;
+    case'wizard-next':{if(ui.wizardStep===1&&ui.draft.rosterIds.length<6)throw Error('Mindestens sechs Spielerinnen im Matchkader.');if(ui.wizardStep===2){ui.missing=lineupValidation(ui.draft);if(ui.missing.length){render();break;}}ui.missing=[];ui.wizardStep++;render();break;}
+    case'roster-card':{
+      const ids=ui.draft.rosterIds,t=data.teams.find(t=>t.id===ui.draft.teamId);
+      const player=t?.players.find(p=>p.id===id);
+      if(!player)throw Error('Spielerin nicht im Teamkader gefunden.');
+      if(!ids.includes(id)&&t.players.some(p=>ids.includes(p.id)&&Number(p.number)===Number(player.number)))throw Error(`Trikotnummer ${player.number} ist bereits im Matchkader vergeben.`);
+      ui.draft.rosterIds=ids.includes(id)?ids.filter(x=>x!==id):[...ids,id];render();break;}
+    case'court-player':ui.pickedPlayer=id;document.querySelectorAll('[data-action="court-player"]').forEach(x=>x.classList.toggle('picked',x.dataset.id===id));break;
+    case'court-position':{const pos=Number(b.dataset.pos),d=ui.draft;const x=ui.pickedPlayer;if(x){const old=d.lineup.indexOf(x);if(old>=0)d.lineup[old]='';d.lineup[pos]=x;ui.pickedPlayer=null;}else{ui.pickerPos=pos;ui.modal='pick-player';}ui.missing=[];render();break;}
+    case'next-position':{
+      const pos=Number(b.dataset.pos),d=ui.nextOptions;
+      if(ui.pickedPlayer){
+        const id=ui.pickedPlayer;
+        if(!d.rosterIds.includes(id))throw Error('Spielerin nicht im Matchkader.');
+        const p=mcurrent()?.teamSnapshot.players.find(x=>x.id===id);
+        if(!p||p.position==='L')throw Error('Libera nicht in den sechs Rotationsplätzen einsetzen.');
+        const old=d.lineup.indexOf(id);if(old>=0)d.lineup[old]='';
+        d.lineup[pos]=id;ui.pickedPlayer=null;ui.missing=[];render();
+      }else{ui.pickerPos=pos;ui.modal='pick-next';render();}
+      break;
+    }
+    case'pick-slot':{const pos=ui.pickerPos,d=ui.modal==='pick-next'?ui.nextOptions:ui.draft;const old=d.lineup.indexOf(id);if(old>=0)d.lineup[old]='';d.lineup[pos]=id;ui.modal=ui.modal==='pick-next'?'nextset':'';render();break;}
+    case'clear-slot':{const d=ui.modal==='pick-next'?ui.nextOptions:ui.draft;d.lineup[ui.pickerPos]='';ui.modal=ui.modal==='pick-next'?'nextset':'';render();break;}
+    case'next-side':ui.nextOptions.side=b.dataset.val;render();break;
+    case'next-serve':ui.nextOptions.firstServe=b.dataset.val;render();break;
+    case'next-confirm':{const o=ui.nextOptions,m=mcurrent(),st=replay(m),n=st.sets.length+1;const missing=lineupValidation(o);if(missing.length){ui.missing=missing;render();break;}const event={type:'SET_START',lineup:o.lineup,liberoId:o.liberoId,side:o.side,firstServe:o.firstServe};const ok=afterEvent(event);if(ok){ui.modal='';ui.nextOptions=null;ui.pickedPlayer=null;render();}break;}
+    case'draft-save':{
+      captureDraftForm();
+      if(await persistBeforeNavigation(()=>{data.draft=structuredClone(ui.draft);data.draftStep=ui.wizardStep;},'Entwurf gespeichert.')){
+        ui.draft=null;ui.wizardStep=0;ui.modal='';ui.view='teams';ui.teamId=null;renderAtTop();
+      }
+      break;}
+    case'draft-discard':{if(await persistBeforeNavigation(()=>{data.draft=null;data.draftStep=0;},'Entwurf verworfen.')){ui.draft=null;ui.wizardStep=0;ui.modal='';ui.view='teams';ui.teamId=null;renderAtTop();}break;}
+    case'draft-keep':ui.modal='';render();break;
+    case'ongoing-delete':confirmAction('Laufendes Spiel endgültig löschen?',()=>{data.matches=data.matches.filter(x=>x.id!==id);commit();render();});break;
+    case'analysis-open':ui.analysisMode=b.dataset.mode;ui.analysisSubject='team';ui.analysisSet=0;renderAtTop();break;
+    case'analysis-back':ui.analysisMode='';renderAtTop();break;
+    case'lineup-change':break;
+    case'set-side':ui.draft.side=b.dataset.val;render();break;
+    case'set-serve':ui.draft.firstServe=b.dataset.val;render();break;
+    case'confirm-match':{
+      const d=ui.draft,t=data.teams.find(t=>t.id===d?.teamId);
+      if(!d||!t)throw Error('Spielvorbereitung nicht gefunden.');
+      const missing=lineupValidation(d);if(missing.length)throw Error('Noch zu erledigen: '+missing.join('; '));
+      const m=newMatch(t,d.opponent,d.date,d.rosterIds);const started=pushEvent(m,{type:'SET_START',lineup:d.lineup,liberoId:d.liberoId,side:d.side,firstServe:d.firstServe});
+      if(await persistBeforeNavigation(()=>{data.matches.push(started);data.draft=null;data.draftStep=0;},'Spiel gespeichert.')){
+        ui.matchId=started.id;ui.draft=null;ui.wizardStep=0;ui.teamId=null;ui.view='teams';renderAtTop();
+      }
+      break;}
+    case'open-live':ui.matchId=id;ui.view='live';ui.statsId=null;render();break;
+    case'normal':afterEvent({type:'NORMAL'});break;
+    case'rally':afterEvent({type:'RALLY',kind:b.dataset.kind,winner:b.dataset.winner});break;
+    case'point-undo':{const m=mcurrent();if(!m||!canUndoPoint(m))break;const corrected=undoPoint(m);data.matches[data.matches.findIndex(x=>x.id===m.id)]=corrected;commit();render();break;}
+    case'point-redo':{const m=mcurrent();if(!m||!canRedoPoint(m))break;const restored=redoPoint(m);data.matches[data.matches.findIndex(x=>x.id===m.id)]=restored;commit();render();break;}
+    case'undo':{const m=mcurrent();if(!m)return;data.matches[data.matches.findIndex(x=>x.id===m.id)]=undo(m);commit();render();break;}
+    case'redo':{const m=mcurrent();if(!m)return;data.matches[data.matches.findIndex(x=>x.id===m.id)]=redo(m);commit();render();break;}
+    case'side-toggle':afterEvent({type:'SIDE'});break;
+    case'change-open':ui.modal='change';render();break;
+    case'change-type':ui.modal=b.dataset.type==='regular'?'regular':'libero';ui.regularOutId=null;ui.regularError='';render();break;
+    case'regular-confirm':await saveRegularSubstitution();break;
+    case'stop-open':ui.modal='stop';render();break;
+    case'stop-archive':{const m=mcurrent();m.archivedEarly=true;ui.modal='';ui.view='archive';commit();render();break;}
+    case'stop-delete':confirmAction('Das gesamte Spiel unwiderruflich löschen?',()=>{data.matches=data.matches.filter(x=>x.id!==ui.matchId);ui.modal='';ui.view='archive';commit();render();});break;
+    case'prepare-set':ui.nextOptions=null;ui.pickedPlayer=null;ui.missing=[];ui.modal='nextset';render();break;
+    case'stats-open':ui.analysisMode='';ui.statsReturn=ui.view;ui.statsId=id;ui.statsSet=0;ui.statsPlayer=null;ui.modal='';ui.view='archive';renderAtTop();break;
+    case'stats-close':ui.analysisMode='';ui.statsId=null;ui.view=ui.statsReturn==='live'?'live':'archive';renderAtTop();break;
+    case'stats-home-close':ui.analysisMode='';ui.statsId=null;ui.statsPlayer=null;ui.statsSet=0;ui.statsReturn='archive';ui.view='teams';ui.modal='';renderAtTop();break;
+    case'stats-filter':ui.statsSet=Number(b.dataset.number);ui.statsPlayer=null;render();break;
+    case'stats-player':ui.statsPlayer=id;render();break;
+    case'info':ui.info=id;ui.modal='info';render();break;
+    case'excel':{const m=data.matches.find(x=>x.id===id);downloadBlob(excelBlob(m),`ServeIQ_${m.date}_${m.opponent.replace(/[^a-z0-9äöü-]/gi,'_').slice(0,32)}.xlsx`);toast('Excel-Datei wird heruntergeladen.');break;}
+    case'json-export':downloadBlob(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),`ServeIQ_Sicherung_${new Date().toISOString().slice(0,10)}.json`);toast('JSON-Sicherung wird heruntergeladen.');break;
+    case'json-import':fileInput.click();break;
+    case'match-delete':confirmAction('Spiel und alle Statistiken endgültig löschen?',()=>{data.matches=data.matches.filter(x=>x.id!==id);ui.statsId=null;commit();render();});break;
+    case'modal-close':ui.modal='';render();break;
+    case'confirm-yes':{const f=ui.confirmFn;ui.confirmFn=null;ui.modal='';if(f)f();break;}
+    default:break;
+  }}catch(err){showAlert(err.message||String(err));}
+});
+root.addEventListener('input',e=>{if(e.target.closest('[data-form="player"]')&&['first','last','number'].includes(e.target.name)){ui.playerDraft={...(ui.playerDraft||{}),[e.target.name]:e.target.value};if(e.target.name==='number'){ui.numberChoice=Number(e.target.value)||null;document.querySelectorAll('.number-choice').forEach(x=>x.classList.toggle('selected',Number(x.dataset.number)===ui.numberChoice));}}});
+root.addEventListener('change',e=>{
+  const t=e.target,action=t.dataset.action;
+  if(t.closest('[data-form="player"]')&&t.name==='position')ui.playerDraft={...(ui.playerDraft||{}),position:t.value};
+  if(action==='regular-out'){ui.regularOutId=t.value;ui.regularError='';render();return;}
+  if(action==='analysis-subject'){ui.analysisSubject=t.value;render();}
+  if(action==='analysis-set'){ui.analysisSet=Number(t.value);render();}
+  if(action==='next-libero'){ui.nextOptions.liberoId=t.value;render();}
+  if(action==='lineup-change'){ui.draft.lineup[Number(t.dataset.pos)]=t.value;}
+  if(action==='libero-select'){ui.draft.liberoId=t.value;}
+  if(action==='roster-toggle'){const list=ui.draft.rosterIds;if(t.checked){if(!list.includes(t.dataset.id))list.push(t.dataset.id);}else ui.draft.rosterIds=list.filter(x=>x!==t.dataset.id);render();}
+  if(action==='stats-select-player'){ui.statsPlayer=t.value;render();}
+  if(t.name==='position'&&t.closest('[data-form="player"]')){ui.playerDraft={...(ui.playerDraft||{}),position:t.value};}
+  if(t.name==='category'&&t.closest('[data-form="team"]')){const form=t.closest('form');form.querySelector('[name="league"]').innerHTML=selectOpt(categoryLeagues(t.value),'');}
+});
+root.addEventListener('keydown',e=>{
+  if(e.key!=='Enter')return;
+  const form=e.target.closest('form[data-form="player"]');
+  if(form){
+    const next={first:'last',last:'position',position:'number'}[e.target.name];
+    if(next){e.preventDefault();form.querySelector(`[name="${next}"]`)?.focus();return;}
+    if(e.target.name==='number'){
+      e.preventDefault();form.querySelector('[data-action="player-save"]')?.focus();savePlayerFromFields();return;
+    }
+  }
+  if(e.target.closest('form[data-form="team"]')&&e.target.tagName==='INPUT'){
+    e.preventDefault();saveTeamFromFields();
+  }
+});
+root.addEventListener('submit',e=>{
+  const form=e.target.closest('[data-form]');if(!form)return;e.preventDefault();const d=Object.fromEntries(new FormData(form));
+  try{switch(form.dataset.form){
+    case'team':{saveTeamFromFields();break;}
+    case'player':{savePlayerFromFields();break;}
+    case'match-basic':{void saveMatchBasicsAndNext();break;}
+    case'regular':void saveRegularSubstitution();break;
+    case'nextset':{const m=mcurrent(),st=replay(m),n=st.sets.length+1;
+      const e={type:'SET_START',lineup:Array.from({length:6},(_,i)=>d[`pos${i}`]),liberoId:d.liberoId,side:d.side,firstServe:d.firstServe};
+      if(n<=4)e.firstServe=opposite(st.current.firstServe);
+      if(n===5&&!e.firstServe)throw Error('Im fünften Satz den ersten Service nach Auslosung auswählen.');
+      afterEvent(e);if(ui.modal!=='alert')ui.modal='';render();break;}
+  }}catch(err){showAlert(err.message||String(err));}
+});
+// Import is intentionally performed only after explicit replacement confirmation.
+const fileInput=document.createElement('input');fileInput.type='file';fileInput.id='import-file';fileInput.accept='.json,application/json';fileInput.hidden=true;document.body.append(fileInput);
+fileInput.addEventListener('change',async()=>{const file=fileInput.files?.[0];if(!file)return;
+ try{const parsed=JSON.parse(await file.text());validateBackup(parsed);
+   confirmAction('JSON-Sicherung importieren? Alle bisher auf diesem Gerät gespeicherten Teams und Spiele werden ersetzt.',()=>{
+     data=parsed;ui.statsId=null;ui.matchId=null;ui.draft=null;ui.teamId=null;ui.view='teams';data.introSeen=true;commit();render();});
+ }catch(err){showAlert(`Import fehlgeschlagen: ${err.message}`);}finally{fileInput.value='';}
+});
+(async()=>{data=await load();ui.view='teams';armNav();if(ui.view==='live'){const m=activeMatch();if(m)ui.matchId=m.id;}render();})();
+
+let swipeStart=0;root.addEventListener('touchstart',e=>{if(e.touches.length===1&&e.touches[0].clientY>window.innerHeight-60)swipeStart=e.touches[0].clientY;},{passive:true});root.addEventListener('touchend',e=>{if(swipeStart&&e.changedTouches[0].clientY<swipeStart-22){ui.menuOpen=true;armNav();render();}swipeStart=0;},{passive:true});
+
+// Drag/drop on desktop, plus mobile touch drag on initial and subsequent sets.
+let dragging=null;
+function placingContext(){return ui.modal==='nextset'?ui.nextOptions:ui.draft;}
+function placeDraggedPlayer(playerId,pos){
+ const d=placingContext(); if(!d||!Number.isInteger(pos)||pos<0||pos>5)return false;
+ if(!d.rosterIds.includes(playerId))return false;
+ const roster=ui.modal==='nextset'?mcurrent()?.teamSnapshot.players:data.teams.find(t=>t.id===d.teamId)?.players;
+ const player=roster?.find(p=>p.id===playerId);
+ if(!player||player.position==='L')return false;
+ const old=d.lineup.indexOf(playerId);if(old>=0)d.lineup[old]='';
+ d.lineup[pos]=playerId;ui.pickedPlayer=null;ui.missing=[];render();return true;
+}
+root.addEventListener('dragstart',e=>{
+ const b=e.target.closest('[data-action="court-player"]');
+ if(b){dragging=b.dataset.id;e.dataTransfer?.setData('text/plain',dragging);if(e.dataTransfer)e.dataTransfer.effectAllowed='move';}
+});
+root.addEventListener('dragend',()=>{dragging=null;});
+root.addEventListener('dragover',e=>{if(e.target.closest('[data-drop]'))e.preventDefault();});
+root.addEventListener('drop',e=>{
+ const target=e.target.closest('[data-drop]');if(!target)return;
+ const id=dragging||e.dataTransfer?.getData('text/plain');
+ if(!id)return;e.preventDefault();placeDraggedPlayer(id,Number(target.dataset.drop));dragging=null;
+});
+let touchChoice=null;
+root.addEventListener('touchstart',e=>{
+ const b=e.target.closest('[data-action="court-player"]');
+ if(b&&e.touches.length===1)touchChoice={id:b.dataset.id,x:e.touches[0].clientX,y:e.touches[0].clientY,moving:false};
+},{passive:true});
+root.addEventListener('touchmove',e=>{
+ if(!touchChoice||e.touches.length!==1)return;
+ const t=e.touches[0],dist=Math.hypot(t.clientX-touchChoice.x,t.clientY-touchChoice.y);
+ if(dist>15){touchChoice.moving=true;e.preventDefault();}
+},{passive:false});
+root.addEventListener('touchend',e=>{
+ if(!touchChoice)return;
+ const t=e.changedTouches[0];
+ const dist=Math.hypot(t.clientX-touchChoice.x,t.clientY-touchChoice.y);
+ if(touchChoice.moving&&dist>25){
+   const field=document.elementFromPoint(t.clientX,t.clientY)?.closest('[data-drop]');
+   if(field){e.preventDefault();placeDraggedPlayer(touchChoice.id,Number(field.dataset.drop));}
+ }
+ touchChoice=null;
+},{passive:false});
+</script><script>
+// GitHub Pages only: offline use after the first successful online visit.
+// Local HTML previews deliberately skip service-worker registration.
+if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js', {scope:'./'}).catch(err => console.warn('Offline-Modus nicht verfügbar:', err)));
+}
+</script></body></html>
